@@ -31,15 +31,13 @@ export class SeedAdvancedConfig extends SeedConfig {
 
     this.ENABLE_SCSS = true;
 
-    let arg: string;
     if (argv && argv._) {
-      arg = argv._[0];
-      if (arg.indexOf('desktop') > -1) {
+      if (argv['desktop']) {
         this.TARGET_DESKTOP = true;
-        if (arg.indexOf('.mac') > -1 || arg.indexOf('.windows') > -1 || arg.indexOf('.linux') > -1) {
+        if (argv['desktopBuild']) {
           this.TARGET_DESKTOP_BUILD = true;
         }
-      } else if (arg.indexOf('hybrid') > -1) {
+      } else if (argv['hybrid']) {
         this.TARGET_MOBILE_HYBRID = true;
       }
     }
@@ -61,14 +59,15 @@ export class SeedAdvancedConfig extends SeedConfig {
     this.BOOTSTRAP_PROD_MODULE = `${this.BOOTSTRAP_DIR}${bootstrap}`;
     this.BOOTSTRAP_FACTORY_PROD_MODULE = `${this.BOOTSTRAP_DIR}${bootstrap}.prod`;
 
-    this.APP_TITLE = 'Eni Puzzle';
-    this.APP_BASE = ''; // paths must remain relative
+    this.APP_TITLE = 'Angular Seed Advanced';
+    this.APP_BASE = this.TARGET_DESKTOP ? '' // paths must remain relative for desktop build
+      : '/';
 
     // Advanced seed packages
     let additionalPackages: ExtendPackages[] = [
       {
         name: 'lodash',
-        path: `${this.APP_BASE}node_modules/lodash/lodash.js`,
+        path: 'node_modules/lodash/lodash.js',
         packageMeta: {
           main: 'index.js',
           defaultExtension: 'js'
@@ -97,7 +96,7 @@ export class SeedAdvancedConfig extends SeedConfig {
       },
       {
         name: '@ngrx/effects/testing',
-        path: `${this.APP_BASE}node_modules/@ngrx/effects/testing/index.js`
+        path: 'node_modules/@ngrx/effects/testing/index.js'
       },
       {
         name: '@ngrx/store-devtools',
@@ -123,24 +122,17 @@ export class SeedAdvancedConfig extends SeedConfig {
       {
         name: 'angulartics2',
         packageMeta: {
-          main: 'dist/index.js',
-          defaultExtension: 'js'
-        }
-      },
-      {
-        name: 'angulartics2/dist/providers',
-        packageMeta: {
-          main: 'index.js',
+          main: 'dist/core.umd.js',
           defaultExtension: 'js'
         }
       },
       {
         name: 'ngrx-store-freeze',
-        path: `${this.APP_BASE}node_modules/ngrx-store-freeze/dist/index.js`
+        path: 'node_modules/ngrx-store-freeze/dist/index.js'
       },
       {
         name: 'deep-freeze-strict',
-        path: `${this.APP_BASE}node_modules/deep-freeze-strict/index.js`
+        path: 'node_modules/deep-freeze-strict/index.js'
       }
     ];
 

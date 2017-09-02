@@ -5,10 +5,7 @@
     "declaration": false,
     "removeComments": true,
     "noLib": false,
-    "lib": [
-      "es2016",
-      "dom"
-    ],
+    "lib": ["es2016", "dom"],
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
@@ -27,16 +24,8 @@
     "types": [
       "node",
       "jasmine",
-      "protractor",
       "systemjs"
     ]
   },
-  "exclude": [
-    "desktop",
-    "nativescript",
-    "node_modules",
-    "dist",
-    "src"
-  ],
   "compileOnSave": false
 }

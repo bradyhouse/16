@@ -1,0 +1,11 @@
+<div class="puzzle-component" *ngIf="!isLoading">
+  <input type="button" *ngFor="let square of board.squares"
+         [id]="square.id"
+         value=""
+         [class]="square.cssClass"
+         [draggable]="!square.isEmpty"
+         (dragstart)="onSquareDragStart($event, square)"
+         (dragend)="onSquareDragEnd($event, square)"
+         (dragover)="onSquareDragOver($event, square)"
+         (click)="onSquareClick(square)" >
+</div>

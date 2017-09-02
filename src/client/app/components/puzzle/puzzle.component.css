@@ -1,0 +1,75 @@
+.puzzle-component {
+  padding-top: calc(2vh);
+  padding-bottom: calc(2vh);
+  padding-left: calc(2vw);
+  padding-right: calc(2vw);
+}
+
+.puzzle-component input[type="button"] {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px; /* future proofing */
+  -khtml-border-radius: 10px; /* for old Konqueror browsers */
+  border-color: white;
+  border-width: 1px;
+}
+
+.puzzle-component .col-a {
+  width: calc(12vw);
+  height: calc(10vh);
+  background-color: yellow;
+}
+
+.puzzle-component .col-b {
+  width: calc(12vw);
+  height: calc(10vh);
+  background-color: orange;
+}
+
+.puzzle-component .col-c {
+  width: calc(12vw);
+  height: calc(10vh);
+  background-color: red;
+}
+
+.puzzle-component .col-d {
+  width: calc(12vw);
+  height: calc(10vh);
+  background-color: darkred;
+}
+
+.puzzle-component .col-e {
+  width: calc(12vw);
+  height: calc(10vh);
+  background-color: blueviolet;
+}
+
+.puzzle-component .col-f {
+  width: calc(12vw);
+  height: calc(10vh);
+  background-color: blue;
+}
+
+.puzzle-component .col-g {
+  width: calc(12vw);
+  height: calc(10vh);
+  background-color: turquoise;
+}
+
+.puzzle-component .col-h {
+  width: calc(12vw);
+  height: calc(10vh);
+  background-color: green;
+}
+
+.puzzle-component .empty {
+  width: calc(12vw);
+  height: calc(10vh);
+  background-color: white;
+  border-radius: none;
+  box-shadow: none;
+  border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}

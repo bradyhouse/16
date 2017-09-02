@@ -1,6 +1,10 @@
 // app
-import {GameRoutes} from './game/game.routes';
+import { HomeRoutes } from './home/home.routes';
+import { AboutRoutes } from './about/about.routes';
+import { PuzzleRoutes } from './puzzle/puzzle.routes';
 
 export const routes: Array<any> = [
-  ...GameRoutes
+  ...HomeRoutes,
+  ...AboutRoutes,
+  ...PuzzleRoutes
 ];

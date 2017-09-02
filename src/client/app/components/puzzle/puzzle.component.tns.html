@@ -1,0 +1,12 @@
+<ScrollView>
+  <GridLayout rows="auto,auto,auto,auto,auto,auto,auto,auto" columns="*,*,*,*,*,*,*,*">
+    <Button *ngFor="let square of board.squares"
+            [row]="square.row"
+            [col]="square.col"
+            [id]="square.id"
+            [text]=""
+            [class]="square.isEmpty === 'true' ? 'empty' : square.cssClass"
+            (tap)="onSquareTap($event, square)"
+            (pan)="onSquarePan($event, square)"></Button>
+  </GridLayout>
+</ScrollView>

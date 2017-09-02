@@ -1,0 +1,64 @@
+GridLayout {
+  padding: 0;
+}
+
+button {
+  font-size: 30vw;
+  horizontal-align: left;
+  opacity: .9;
+  border-radius: 2;
+  border-color: #CCD5AB;
+  border-width: 2;
+  color: white;
+  height: 22.5%;
+  width: 10%;
+  padding: 0;
+  margin: 0;
+}
+
+.col-a {
+
+  background-color: yellow;
+}
+
+.col-b {
+
+  background-color: orange;
+}
+
+.col-c {
+
+  background-color: red;
+}
+
+.col-d {
+
+  background-color: darkred;
+}
+
+.col-e {
+
+  background-color: blueviolet;
+}
+
+.col-f {
+
+  background-color: blue;
+}
+
+.col-g {
+
+  background-color: turquoise;
+}
+
+.col-h {
+
+  background-color: green;
+}
+
+.empty {
+  opacity: 1;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: white;
+}
