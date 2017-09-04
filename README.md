@@ -13,7 +13,6 @@ app are currently under construction.
 
 - [Prerequisites](#prerequisites)
 - [How to start](#how-to-start)
-- [Running tests](#running-tests)
 - [License](#license)
 
 ### Prerequisites
