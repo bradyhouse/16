@@ -14,16 +14,6 @@ app are currently under construction.
 - [Prerequisites](#prerequisites)
 - [How to start](#how-to-start)
 - [Running tests](#running-tests)
-- [Web configuration options](#web-configuration-options)
-- [Code organization overview](#code-organization-overview)
-- [How-tos](#how-tos)
-- [General best practice guide to sharing code](#general-best-practice-guide-to-sharing-code)
-- [Integration guides](https://github.com/NathanWalker/angular-seed-advanced/wiki)
-- [How best to use for your project](#how-best-to-use-for-your-project)
-- [Dockerization](#dockerization)
-  + [How to build and start the dockerized version of the application](#how-to-build-and-start-the-dockerized-version-of-the-application)
-  + [Development build and deployment](#development-build-and-deployment)
-  + [Production build and deployment](#production-build-and-deployment)
 - [License](#license)
 
 ### Prerequisites
@@ -61,3 +51,8 @@ $ npm run start.deving
 $ npm run build.dev
 # prod build
 $ npm run build.prod
+```
+
+## License
+
+MIT
