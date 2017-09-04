@@ -17,12 +17,12 @@ import 'rxjs/add/operator/share';
 export class BoardService {
 
   boardChange$: Observable<Board>;
+  database: DatabaseServiceInterface;
 
   private _board: Board;
   private _boardObserver: Observer<Board>;
   private _emptySquare: Square;
 
-  database: DatabaseServiceInterface;
 
   set board(board: Board) {
     if (this._board.toString() !== board.toString()) {

@@ -200,8 +200,6 @@ export class PuzzleComponent implements OnDestroy {
   }
 
   onSquareSwipe(args: any, square: Square) {
-    console.log('onSquareSwipe > square => ' + JSON.stringify(square));
-    console.log("Swipe Direction: " + args.direction);
 
     if (this.tnsDelayedTask) {
       clearTimeout(this.tnsDelayedTask);
