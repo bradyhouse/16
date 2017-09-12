@@ -1,5 +1,8 @@
 [![Build Status](https://travis-ci.org/bradyhouse/15.svg?branch=master)](https://travis-ci.org/bradyhouse/16) 
 [![Stories in Progress](https://badge.waffle.io/bradyhouse/16.svg?label=in%20progress&title=Stories%20In%20Progress)](http://waffle.io/bradyhouse/16)
+[![dependencies Status](https://david-dm.org/bradyhouse/16/status.svg)](https://david-dm.org/bradyhouse/15)
+[![devDependencies Status](https://david-dm.org/bradyhouse/16/dev-status.svg)](https://david-dm.org/bradyhouse/15?type=dev)
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
 Puzzle 16
 ======

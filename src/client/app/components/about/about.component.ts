@@ -1,4 +1,4 @@
-import { Injector, Component } from '@angular/core';
+import { Injector, Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Config } from '../../modules/core/index';
 
 @Component({
@@ -9,7 +9,10 @@ import { Config } from '../../modules/core/index';
     'about.component.css',
   ],
 })
-export class AboutComponent {
+export class AboutComponent implements OnInit {
+
+  @ViewChild('el') el: ElementRef;
+  height: number;
 
   // Just one way you could handle the {N} `ui/page` Page class
   // in a shared component...
@@ -30,4 +33,13 @@ export class AboutComponent {
     //   this.page.actionBarHidden = true;
     // }
   }
+
+  ngOnInit() {
+
+    if (typeof document == 'object' && document.title) {
+      document.title = 'About';
+      this.height = this.el.nativeElement.offsetParent.offsetHeight - (48 * 2) - 16 ;
+    }
+  }
+
 }

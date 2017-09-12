@@ -1,0 +1,11 @@
+:host {
+  background-image: url('./../../../assets/images/background/about.png');
+  background-size: auto;
+  background-clip: border-box;
+  background-repeat: no-repeat;
+  background-position: right;
+  -webkit-background-size: auto;
+  -moz-background-size: auto;
+  -o-background-size: auto;
+  display: block;
+  padding: 0 16px; }

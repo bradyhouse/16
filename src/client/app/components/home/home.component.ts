@@ -1,12 +1,8 @@
 // libs
 import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs/Observable';
 
 // app
-import { RouterExtensions, Config } from '../../modules/core/index';
-import { IAppState, getNames } from '../../modules/ngrx/index';
-import { NameList } from '../../modules/sample/index';
+import { LogService } from '../../modules/core/services/index';
 
 @Component({
   moduleId: module.id,
@@ -15,34 +11,25 @@ import { NameList } from '../../modules/sample/index';
   styleUrls: ['home.component.css']
 })
 export class HomeComponent implements OnInit {
-  public names$: Observable<any>;
-  public newName: string;
 
-  constructor(private store: Store<IAppState>, public routerext: RouterExtensions) {}
+  @ViewChild('el') el: ElementRef;
+  height: number;
+
+  constructor(public log: LogService) {}
 
   ngOnInit() {
-    this.names$ = this.store.let(getNames);
-    this.newName = '';
+
+    this.log.debug('home > el parent offsetHeight: ' + this.el.nativeElement.offsetParent.offsetHeight);
+
+    this.log.debug('home > el offsetHeight: ' + this.el.nativeElement.offsetHeight);
+
+    if (typeof document == 'object' && document.title) {
+      document.title = 'home';
+      this.height = this.el.nativeElement.offsetParent.offsetHeight - (48 * 2);
+    }
+
+
   }
 
-  /*
-   * @param newname  any text as input.
-   * @returns return false to prevent default form submit behavior to refresh the page.
-   */
-  addName(): boolean {
-    this.store.dispatch(new NameList.AddAction(this.newName));
-    this.newName = '';
-    return false;
-  }
 
-  readAbout() {
-    // Try this in the {N} app
-    // {N} can use these animation options
-    this.routerext.navigate(['/about'], {
-      transition: {
-        duration: 1000,
-        name: 'slideTop',
-      }
-    });
-  }
 }

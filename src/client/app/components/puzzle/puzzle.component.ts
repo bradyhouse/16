@@ -1,4 +1,4 @@
-import {Component, OnDestroy, Injector} from '@angular/core';
+import {Component, OnDestroy, Injector, OnInit} from '@angular/core';
 import {ISubscription} from 'rxjs/Subscription';
 import {
   ToolbarOptionsInterface,
@@ -21,7 +21,7 @@ import {PuzzleStateService} from './puzzle-state.service';
   templateUrl: './puzzle.component.html',
   styleUrls: ['./puzzle.component.css']
 })
-export class PuzzleComponent implements OnDestroy {
+export class PuzzleComponent implements OnInit, OnDestroy {
   toolbarOptions: ToolbarOptionsInterface;
   fiddleTitle: string;
   board: Board;
@@ -56,6 +56,11 @@ export class PuzzleComponent implements OnDestroy {
 
   }
 
+  ngOnInit() {
+    if (typeof document == 'object' && document.title) {
+      document.title = 'Puzzle';
+    }
+  }
   ngOnDestroy() {
     this.clearSubscriptions();
   }

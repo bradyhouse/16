@@ -1,4 +1,5 @@
 {
+  "SIXTEEN": "Sixteen",
   "HOME": "Home",
   "ABOUT": "About",
   "HELLO": "Hello",
@@ -8,5 +9,5 @@
   "ABOUT_REWARD": "For reward, here is a list of awesome computer scientists:",
   "INPUT_HINT": "Enter a new computer scientist...",
   "ADD_BTN_TEXT": "Add",
-  "SUCCESS_MSG": "Your deployment of Angular Seed Advanced worked perfectly."
+  "SUCCESS_MSG": "Your deployment of {16} worked perfectly."
 }

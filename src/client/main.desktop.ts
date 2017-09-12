@@ -51,7 +51,7 @@ app.on('ready', () => {
     console.log(`Page navigated: ${url}`);
   });
 
-  let appTitle: string = `Angular Seed Advanced`;
+  let appTitle: string = `16`;
 
   let langMenu: any = {
     label: 'Language',
@@ -123,7 +123,7 @@ app.on('ready', () => {
         }, {
           type: 'separator'
         }, {
-          label: 'Hide Angular Seed Advanced',
+          label: 'Hide 16',
           accelerator: 'Command+H',
           selector: 'hide:'
         }, {
