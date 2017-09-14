@@ -74,17 +74,17 @@ app.on('ready', () => {
     submenu: [{
       label: 'Learn More',
       click:() => {
-        shell.openExternal('https://github.com/NathanWalker/angular-seed-advanced');
+        shell.openExternal('https://github.com/bradyhouse/16');
       }
     }, {
         label: 'Issues',
         click:() => {
-          shell.openExternal('https://github.com/NathanWalker/angular-seed-advanced/issues');
+          shell.openExternal('https://github.com/bradyhouse/16/issues');
         }
       }, {
-        label: `My Amazing Parent: Minko Gechev's Angular Seed`,
+        label: `My Amazing Parent: Nathan Walker Angular Seed Advanced Project`,
         click:() => {
-          shell.openExternal('https://github.com/mgechev/angular-seed');
+          shell.openExternal('https://github.com/NathanWalker/angular-seed-advanced');
         }
       }, {
         label: 'Angular 2',
@@ -100,11 +100,6 @@ app.on('ready', () => {
         label: 'Electron Docs',
         click: () => {
           shell.openExternal('https://github.com/atom/electron/tree/master/docs');
-        }
-      }, {
-        label: 'Codeology Visualization',
-        click:() => {
-          shell.openExternal('http://codeology.braintreepayments.com/nathanwalker/angular-seed-advanced');
         }
       }]
   };
