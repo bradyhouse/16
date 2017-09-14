@@ -4,26 +4,23 @@
   display: block;
   height: 48px;
   padding: 0 16px;
-  position: relative;
-}
+  position: relative; }
+
 
 h1 {
   display: inline;
   font-size: 20px;
   font-weight: normal;
   letter-spacing: 0.1px;
-  line-height: 48px;
-}
+  line-height: 48px; }
 
 :host lang-switcher,
 :host .more {
-  position: absolute;
-}
+  position: absolute; }
 
 :host lang-switcher {
   top: 13px;
-  right: 52px;
-}
+  right: 52px; }
 
 .more {
   background: url("./assets/svg/more.svg");
@@ -32,9 +29,9 @@ h1 {
   height: 24px;
   width: 24px;
   cursor: pointer;
-  opacity: 0.7;
-}
+  opacity: 0.7; }
 
 .more:hover {
-  opacity: 1;
-}
+  opacity: 1; }
+
+/*# sourceMappingURL=/app/modules/shared/components/toolbar/toolbar.component.css.map */

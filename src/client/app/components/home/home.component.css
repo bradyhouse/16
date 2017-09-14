@@ -3,10 +3,15 @@
   background-size: auto;
   background-clip: content-box;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right;
   -webkit-background-size: auto;
   -moz-background-size: auto;
   -o-background-size: auto;
   display: block;
   padding: 0 16px; }
+
+.btn-default {
+  background-color: transparent !important;
+
+}
 

@@ -1,5 +1,3 @@
-<div #el  [ngStyle]="{'height': height + 'px'}">
-  <p>16 is a virtualization of <a href="http://www.enipuzzles.com/" target="_blank">Eni Puzzle</a>.  It attempts to
-  approximate the 3 dimensional game in 2 dimensional space.
-  <p>
+<div #el  [ngStyle]="{'height': height + 'px'}" (resize)="onWindowResize($event)">
+  <p>{{'ABOUT_CONTENT_1' | translate}}<a href='http://www.enipuzzles.com/' target='_blank'>Eni Puzzle</a>{{'ABOUT_CONTENT_2' | translate}}
 </div>

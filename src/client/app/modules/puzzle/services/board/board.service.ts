@@ -129,7 +129,7 @@ export class BoardService {
           let colClass: string = Utils.mapColClass(num),
             squareValue: number = i < (row.seq.length - 1) || (i < row.seq.length && !row.isLast) ? num : null,
             squareIsEmpty: boolean = squareValue ? false : true,
-            squareClass: string = squareValue ? 'btn ' + colClass : 'empty',
+            squareClass: string = squareValue ? 'btn ' + colClass : 'btn empty',
             squareExpectedValue: number = row.expectedSeq[i],
             squareId: string = 'row-' + row.index + '-square-' + squareExpectedValue,
             squareRow: number = row.index,

@@ -1,5 +1,5 @@
-import { Injector, Component, OnInit, ElementRef, ViewChild } from '@angular/core';
-import { Config } from '../../modules/core/index';
+import {Injector, Component, OnInit, ElementRef, ViewChild} from '@angular/core';
+import {Config} from '../../modules/core/index';
 
 @Component({
   moduleId: module.id,
@@ -13,6 +13,8 @@ export class AboutComponent implements OnInit {
 
   @ViewChild('el') el: ElementRef;
   height: number;
+  timeOut: any;
+
 
   // Just one way you could handle the {N} `ui/page` Page class
   // in a shared component...
@@ -35,11 +37,26 @@ export class AboutComponent implements OnInit {
   }
 
   ngOnInit() {
-
     if (typeof document == 'object' && document.title) {
       document.title = 'About';
-      this.height = this.el.nativeElement.offsetParent.offsetHeight - (48 * 2) - 16 ;
+      this._calcHeight();
     }
   }
+
+  onWindowResize(event: any) {
+    if (this.timeOut) {
+      window.clearTimeout(this.timeOut);
+    }
+    this.timeOut = window.setTimeout(() => {
+      this._calcHeight();
+    }, 64);
+  }
+
+  private _calcHeight() {
+    if (typeof document == 'object' && document.title) {
+      this.height = this.el.nativeElement.offsetParent.offsetHeight - (48 * 2) - 16;
+    }
+  }
+
 
 }
