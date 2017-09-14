@@ -293,13 +293,13 @@ export class SeedConfig {
    * The folder for the built CSS files.
    * @type {strings}
    */
-  CSS_DEST = `${this.APP_DEST}/css`;
+  CSS_DEST = `./${this.APP_DEST}/css`;
 
   /**
    * The folder for the built JavaScript files.
    * @type {string}
    */
-  JS_DEST = `${this.APP_DEST}/js`;
+  JS_DEST = `./${this.APP_DEST}/js`;
 
   /**
    * The version of the application as defined in the `package.json`.
