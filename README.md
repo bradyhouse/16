@@ -7,7 +7,7 @@
 Puzzle 16
 ======
 
-![Icon](https://imgur.com/s0CIHaV)
+![Icon](http://imgur.com/s0CIHaV)
 
 Puzzle 16 is a game inspired by [Eni Puzzle](http://www.enipuzzles.com/). The android and iOS versions of the
 app are currently under construction.
