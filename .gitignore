@@ -42,7 +42,6 @@ ts-node
 
 dist
 dev
-docs
 lib
 tmp
 
