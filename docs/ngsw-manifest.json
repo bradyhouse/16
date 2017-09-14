@@ -1,0 +1,46 @@
+{
+  "static": {
+    "urls": {
+      "/index.html": "d1c60b8ee48889705475ac8dbb2f783ba6cda02c",
+      "/package.json": "58d8000ca9b30c28ec63fd7f72f9753d82879223",
+      "/worker-basic.min.js": "9fa29c846dc83b45e8bf39592ff87045b6737ed6",
+      "/assets/data.json": "4442de734b100da8d244b35d34a355dee4dd9618",
+      "/assets/logo.icns": "af0364c906cac79f26c2c0f49b3e271b5253ae94",
+      "/assets/logo.ico": "b8c9d485ae3ace0ec9131a83efbea7e9fb1b8b0a",
+      "/assets/sixteen.png": "58575cb8cf289bc3f5b0da5792ce0041bbe95886",
+      "/css/main.css": "5589c51cbdd4999ae9bf794f79db29ab8cd21ec4",
+      "/js/app.js": "41e051d1d2f27c199e1f36667f2b9f1cccc9475f",
+      "/js/shims.js": "b059624f6d942b777e17f1bb89d8aaa69ff2bd96",
+      "/assets/favicon/android-chrome-192x192.png": "6a682492cdcf63f1aa9fa8d5ee47a47f1bf8d95c",
+      "/assets/favicon/android-chrome-256x256.png": "c25adf3d84a588c86d66466bdee676689c4fc604",
+      "/assets/favicon/apple-touch-icon.png": "a5d5ff469db0a08fc08c8dc75384b6d8e1de2ba4",
+      "/assets/favicon/browserconfig.xml": "974aea18bda5a95802c06b80126ab1d96d91d708",
+      "/assets/favicon/favicon-16x16.png": "550b185c5e0c88b5df460a122b3d5c3d9a728613",
+      "/assets/favicon/favicon-32x32.png": "54f451185a8ad860408112560e368e626a9d1afa",
+      "/assets/favicon/favicon.ico": "2dceeea7eca284928ccc9d546247698deee9a3f3",
+      "/assets/favicon/manifest.json": "6dd8529134c3d02fa073b40f1f0d0dbc684411dc",
+      "/assets/favicon/mstile-150x150.png": "b1b91f3512f8f2aaddd1a6f937a8444c3aed1465",
+      "/assets/i18n/bg.json": "b16cbb555af7e206e0943c66e36a6f2f1731874a",
+      "/assets/i18n/en.json": "054c21c796dbf52125297c377c12b7f0a20db53e",
+      "/assets/i18n/es.json": "f5a8208e28ec666fd58ea7db98c99350cb73b7b6",
+      "/assets/i18n/fr.json": "110af6b937f1a6f21aef241f6813d1473a5b00de",
+      "/assets/i18n/ru.json": "d743272ef5ff00dbdd31fe938a60aa1ba56d3d8d",
+      "/assets/svg/more.svg": "9838cd822e0f989a0befbd365365ee2751bbdebc",
+      "/assets/svg/smile.svg": "1504cc699fc1c338565e766ddf773ded3797e7a7",
+      "/assets/images/background/about.png": "745c9c0326510c671ddba0ef4e2653bab8a4f9b5",
+      "/assets/images/background/home.png": "f1ec7fa4357f6e7165a33b79b54f5688827f4967"
+    }
+  },
+  "routing": {
+    "index": "/index.html",
+    "routes": {
+      "/": {
+        "prefix": false
+      }
+    }
+  },
+  "push": {
+    "showNotifications": true,
+    "backgroundOnly": false
+  }
+}
