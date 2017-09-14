@@ -57,7 +57,7 @@ export class PuzzleComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    if (typeof document == 'object' && document.title) {
+    if (typeof document === 'object' && document.title) {
       document.title = 'Puzzle';
     }
   }

@@ -37,7 +37,7 @@ export class AboutComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (typeof document == 'object' && document.title) {
+    if (typeof document === 'object' && document.title) {
       document.title = 'About';
       this._calcHeight();
     }
@@ -53,7 +53,7 @@ export class AboutComponent implements OnInit {
   }
 
   private _calcHeight() {
-    if (typeof document == 'object' && document.title) {
+    if (typeof document === 'object' && document.title) {
       this.height = this.el.nativeElement.offsetParent.offsetHeight - (48 * 2) - 16;
     }
   }

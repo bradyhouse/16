@@ -39,7 +39,8 @@
     "minify.bundles",
     "build.index.prod",
     "sw.manifest.static",
-    "minify.index"
+    "minify.index",
+    "print.banner"
   ],
 
   "build.prod.aot": [

@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
 
     this.log.debug('home > el offsetHeight: ' + this.el.nativeElement.offsetHeight);
 
-    if (typeof document == 'object' && document.title) {
+    if (typeof document === 'object' && document.title) {
       document.title = 'home';
       this._calcHeight();
     }
@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
   }
   
   private _calcHeight() {
-    if (typeof document == 'object' && document.title) {
+    if (typeof document === 'object' && document.title) {
       this.height = this.el.nativeElement.offsetParent.offsetHeight - (48 * 2);
 
     }
