@@ -20,7 +20,7 @@ import { DesktopConfig } from './app/modules/electron/index';
 // crashReporter.start({
 //   productName: 'AngularSeedAdvanced',
 //   companyName: 'NathanWalker',
-//   submitURL: 'https://github.com/NathanWalker/angular-seed-advanced',
+//   submitURL: 'https://github.com/bradyhouse/sixteen',
 //   autoSubmit: true
 // });
 

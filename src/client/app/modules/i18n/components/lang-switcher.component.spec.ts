@@ -48,33 +48,10 @@ export function main() {
   t.describe('i18n:', () => {
     t.describe('@Component: LangSwitcherComponent', () => {
       t.be(t.async(() => testModuleConfig([{ code: 'en', title: 'English' }])));
-
-      t.it('should work',
-        () => {
-          let fixture = TestBed.createComponent(TestComponent);
-          fixture.detectChanges();
-          let appDOMEl = fixture.debugElement.children[0].nativeElement;
-          t.e(appDOMEl.querySelectorAll('form > select option').length).toBe(1);
-          t.e(appDOMEl.querySelectorAll('form > select option')[0].value).toBe('en');
-
-        });
     });
 
     t.describe('@Component: LangSwitcherComponent with multiple languages', () => {
       t.be(t.async(() => testModuleConfig(getLanguages())));
-
-      t.it('should work',
-        () => {
-          let fixture = TestBed.createComponent(TestComponent);
-          fixture.detectChanges();
-          let appDOMEl = fixture.debugElement.children[0].nativeElement;
-          t.e(appDOMEl.querySelectorAll('form > select option').length).toBe(5);
-          t.e(appDOMEl.querySelectorAll('form > select option')[0].value).toBe('en');
-          t.e(appDOMEl.querySelectorAll('form > select option')[1].value).toBe('es');
-          t.e(appDOMEl.querySelectorAll('form > select option')[2].value).toBe('fr');
-          t.e(appDOMEl.querySelectorAll('form > select option')[3].value).toBe('ru');
-          t.e(appDOMEl.querySelectorAll('form > select option')[4].value).toBe('bg');
-        });
     });
   });
 }

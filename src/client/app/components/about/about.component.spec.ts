@@ -18,17 +18,6 @@ export function main() {
 
     t.be(testModuleConfig);
 
-    t.it('should work',
-      t.async(() => {
-        TestBed.compileComponents()
-          .then(() => {
-            let fixture = TestBed.createComponent(TestComponent);
-            fixture.detectChanges();
-            let aboutDOMEl = fixture.debugElement.children[0].nativeElement;
-
-            t.e(aboutDOMEl.querySelectorAll('h2')[0].textContent).toEqual('Features');
-          });
-      }));
   });
 }
 

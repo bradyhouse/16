@@ -1,8 +1,8 @@
 // libs
-import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
+import {Component, ElementRef, ViewChild, OnInit} from '@angular/core';
 
 // app
-import { LogService, RouterExtensions } from '../../modules/core/services/index';
+import {RouterExtensions} from '../../modules/core/services/index';
 
 @Component({
   moduleId: module.id,
@@ -16,13 +16,10 @@ export class HomeComponent implements OnInit {
   height: number;
   timeOut: any;
 
-  constructor(public log: LogService, public routerExt: RouterExtensions) {}
+  constructor(public routerExt: RouterExtensions) {
+  }
 
   ngOnInit() {
-
-    this.log.debug('home > el parent offsetHeight: ' + this.el.nativeElement.offsetParent.offsetHeight);
-
-    this.log.debug('home > el offsetHeight: ' + this.el.nativeElement.offsetHeight);
 
     if (typeof document === 'object' && document.title) {
       document.title = 'home';
@@ -40,7 +37,7 @@ export class HomeComponent implements OnInit {
       this._calcHeight();
     }, 64);
   }
-  
+
   private _calcHeight() {
     if (typeof document === 'object' && document.title) {
       this.height = this.el.nativeElement.offsetParent.offsetHeight - (48 * 2);

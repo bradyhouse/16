@@ -65,15 +65,12 @@ export function main() {
             let homeInstance = fixture.debugElement.children[0].componentInstance;
             let homeDOMEl = fixture.debugElement.children[0].nativeElement;
 
-            t.e(homeDOMEl.querySelectorAll('li').length).toEqual(0);
+            t.e(homeDOMEl.querySelectorAll('li').length).toEqual(4);
 
-            homeInstance.newName = 'Minko';
-            homeInstance.addName();
 
-            fixture.detectChanges();
+            t.e(homeDOMEl.querySelectorAll('li')[0].textContent.trim()).toEqual('PLAY');
+            t.e(homeDOMEl.querySelectorAll('li')[1].textContent.trim()).toEqual('ABOUT');
 
-            t.e(homeDOMEl.querySelectorAll('li').length).toEqual(1);
-            t.e(homeDOMEl.querySelectorAll('li')[0].textContent).toEqual('Minko');
           });
       }));
   });
