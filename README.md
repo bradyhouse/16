@@ -18,7 +18,7 @@ app are currently under construction.
 - [How to start](#how-to-start)
 - [Running tests](#running-tests)
 - [Compo Docs](https://bradyhouse.github.io/16/index.html)
-- [License](LICENSE)
+- [License](https://bradyhouse.github.io/16/license.html)
 
 ### Prerequisites
 
