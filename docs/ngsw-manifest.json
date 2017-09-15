@@ -1,7 +1,7 @@
 {
   "static": {
     "urls": {
-      "/index.html": "832431958c01630e426b7ae76e5bdc069f198af2",
+      "/index.html": "8686e5e3cc28b5afe2adbd3d83fdd5b6e1748072",
       "/package.json": "7da0753e30b49f9ac1e2267ff89c1d0eb2440a52",
       "/worker-basic.min.js": "9fa29c846dc83b45e8bf39592ff87045b6737ed6",
       "/assets/data.json": "4442de734b100da8d244b35d34a355dee4dd9618",
@@ -9,7 +9,7 @@
       "/assets/logo.ico": "b8c9d485ae3ace0ec9131a83efbea7e9fb1b8b0a",
       "/assets/sixteen.png": "58575cb8cf289bc3f5b0da5792ce0041bbe95886",
       "/css/main.css": "623fa6c6b2de54d2f376bb4754bebc3dc5a90c73",
-      "/js/app.js": "86367b2eeb398988fe36c2236788816ee83b137b",
+      "/js/app.js": "88d996caa512730b1c4d0d893f8bfbca3d9e12a6",
       "/js/shims.js": "a5fb3ed8f567a172d5718cdb6349af9f15b0a6f5",
       "/assets/favicon/android-chrome-192x192.png": "6a682492cdcf63f1aa9fa8d5ee47a47f1bf8d95c",
       "/assets/favicon/android-chrome-256x256.png": "c25adf3d84a588c86d66466bdee676689c4fc604",
