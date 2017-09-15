@@ -9,13 +9,13 @@ import { MockBackend, MockConnection } from '@angular/http/testing';
 import { Store, StoreModule } from '@ngrx/store';
 import { EffectsTestingModule, EffectsRunner } from '@ngrx/effects/testing';
 
-// app
+
 import { t } from '../../test/index';
 // import {TEST_CORE_PROVIDERS, GET_HTTP_PROVIDERS_INJECTOR, TEST_LOCATION_PROVIDERS} from '../../core/testing';
 import { AnalyticsModule } from '../../analytics/analytics.module';
 import { NameListService, SampleEffects, reducer, NameList } from '../index';
 
-// test module configuration for each test
+
 const testModuleConfig = () => {
   TestBed.configureTestingModule({
     imports: [

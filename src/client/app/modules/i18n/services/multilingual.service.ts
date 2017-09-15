@@ -1,17 +1,17 @@
-// angular
+
 import { Injectable, InjectionToken } from '@angular/core';
 
 // libs
 import { Store } from '@ngrx/store';
 import { TranslateService } from '@ngx-translate/core';
 
-// app
+
 import { Analytics, AnalyticsService } from '../../analytics/index';
 import { ILang } from '../../core/index';
 import { WindowService } from '../../core/services/window.service';
 import { IAppState } from '../../ngrx/index';
 
-// module
+
 import { CATEGORY } from '../common/category.common';
 import { IMultilingualState, initialState } from '../states/index';
 import { ChangeAction } from '../actions/index';

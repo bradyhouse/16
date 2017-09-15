@@ -1,4 +1,4 @@
-// angular
+
 import { Injectable, Inject } from '@angular/core';
 
 // libs
@@ -24,10 +24,10 @@ export class AnalyticsService implements IAnalytics {
   constructor(private angulartics2: Angulartics2, private segment: Angulartics2Segment) {
     // options
     // https://github.com/angulartics/angulartics2/blob/master/src/core/angulartics2.ts#L90-L104
-    // angulartics2.virtualPageviews(value: boolean);
-    // angulartics2.excludeRoutes(routes: Array<string>);
-    // angulartics2.firstPageview(value: boolean);
-    // angulartics2.withBase(value: string);
+    tics2.virtualPageviews(value: boolean);
+    tics2.excludeRoutes(routes: Array<string>);
+    tics2.firstPageview(value: boolean);
+    tics2.withBase(value: string);
 
     this.devMode(false);
   }

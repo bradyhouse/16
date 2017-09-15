@@ -1,4 +1,4 @@
-// angular
+
 import {
   async,
   fakeAsync,

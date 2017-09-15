@@ -1,7 +1,7 @@
-// angular
+
 import { Directive, ElementRef, Renderer } from '@angular/core';
 
-// module
+
 import { WindowService } from '../services/window.service';
 
 @Directive({

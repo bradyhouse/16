@@ -4,7 +4,7 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-// modules
+s
 import { MultilingualModule } from '../i18n/index';
 import { SHARED_COMPONENTS } from './components/index';
 

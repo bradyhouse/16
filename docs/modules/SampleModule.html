@@ -984,13 +984,6 @@
             <code>src/client/app/modules/sample/sample.module.ts</code>
         </p>
 
-            <p class="comment">
-                <h3>Description</h3>
-            </p>
-            <p class="comment">
-                <p>Do not specify providers for modules that might be imported by a lazy loaded module.</p>
-
-            </p>
 
         <div class="container-fluid module">
             <div class="row">
@@ -1025,14 +1018,10 @@ import { FormsModule } from &#x27;@angular/forms&#x27;;
 import { HttpModule } from &#x27;@angular/http&#x27;;
 import { RouterModule } from &#x27;@angular/router&#x27;;
 
-// app
+
 import { SharedModule } from &#x27;../shared/index&#x27;;
 import { SAMPLE_PROVIDERS } from &#x27;./services/index&#x27;;
 import { MultilingualModule } from &#x27;../i18n/multilingual.module&#x27;;
-
-/**
- * Do not specify providers for modules that might be imported by a lazy loaded module.
- */
 
 @NgModule({
   imports: [

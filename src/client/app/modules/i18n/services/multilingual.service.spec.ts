@@ -1,4 +1,4 @@
-// angular
+
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
@@ -7,16 +7,16 @@ import { Store, StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { Angulartics2Module, Angulartics2Segment } from 'angulartics2';
 
-// app
+
 import { t } from '../../test/index';
 import { CoreModule, ILang, WindowService, ConsoleService } from '../../core/index';
 import { TEST_CORE_PROVIDERS, WindowMockFrench } from '../../core/testing/index';
 
-// module
+
 import { TEST_MULTILINGUAL_PROVIDERS, getLanguages } from '../testing/index';
 import { IMultilingualState, MultilingualService, MultilingualEffects, reducer, ChangeAction, Languages } from '../index';
 
-// test module configuration for each test
+
 const testModuleConfig = (options?: any) => {
   let langProvider = [];
   if (options.languages) {

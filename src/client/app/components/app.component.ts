@@ -4,7 +4,7 @@ import './operators';
 // libs
 import { Component, OnInit } from '@angular/core';
 
-// app
+
 import { AnalyticsService } from '../modules/analytics/services/index';
 import { LogService, AppService } from '../modules/core/services/index';
 import { Config } from '../modules/core/utils/index';

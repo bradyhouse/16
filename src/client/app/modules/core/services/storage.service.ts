@@ -1,7 +1,7 @@
-// angular
+
 import { Injectable } from '@angular/core';
 
-// module
+
 import { IStorage, StorageKey } from '../interfaces/istorage';
 
 @Injectable()

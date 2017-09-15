@@ -2,7 +2,7 @@
 import { Component, Inject } from '@angular/core';
 import { Store } from '@ngrx/store';
 
-// app
+
 import { Config, ILang, LogService } from '../../core/index';
 import { IAppState } from '../../ngrx/index';
 import { ElectronEventService } from '../../electron/index';

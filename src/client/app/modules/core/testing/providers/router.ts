@@ -1,4 +1,4 @@
-// angular
+
 import { Location, LocationStrategy, APP_BASE_HREF } from '@angular/common';
 import { SpyLocation, MockLocationStrategy } from '@angular/common/testing';
 

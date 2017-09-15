@@ -1,11 +1,11 @@
 import { Provider, FactoryProvider } from '@angular/core';
-// angular
+
 import { TestBed } from '@angular/core/testing';
 
-// app
+
 import { t } from '../../../test/index';
 
-// module
+
 import { Config } from '../../utils/index';
 import { ConsoleService, LogService, LogTarget, ConsoleTarget, LogLevel, provideConsoleTarget, LogTargetBase, LogEvent } from '../../services/index';
 

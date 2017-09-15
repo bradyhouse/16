@@ -1,7 +1,7 @@
-// angular
+
 import { Injectable } from '@angular/core';
 
-// module
+
 import { IConsole } from '../interfaces/iconsole';
 
 @Injectable()

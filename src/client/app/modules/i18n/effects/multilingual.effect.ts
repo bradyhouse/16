@@ -1,4 +1,4 @@
-// angular
+
 import { Injectable, Inject } from '@angular/core';
 
 // libs
@@ -8,7 +8,7 @@ import { includes, map } from 'lodash';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-// module
+
 import { MultilingualService, Languages } from '../services/multilingual.service';
 import * as multilingual from '../actions/multilingual.action';
 

@@ -1,11 +1,11 @@
-// angular
+
 import { TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core';
 
-// app
+
 import { t } from '../../test/index';
 
-// module
+
 import { PlatformDirective } from './platform.directive';
 import { WindowService } from '../../core/index';
 import { WindowMock } from '../../core/testing/index';

@@ -14,7 +14,7 @@ import { MultilingualModule } from '../multilingual.module';
 import { MultilingualService, reducer, Languages, LanguageViewHelper } from '../index';
 import { getLanguages } from '../testing/index';
 
-// test module configuration for each test
+
 const testModuleConfig = (languages?: Array<ILang>) => {
   let providers = [
     provideConsoleTarget(LogLevel.Debug),

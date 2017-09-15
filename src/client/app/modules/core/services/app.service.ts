@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-// app
+
 import { AnalyticsService } from '../../../modules/analytics/services/analytics.service';
 import { LogService } from './logging/log.service';
 import { Config } from '../utils/config';

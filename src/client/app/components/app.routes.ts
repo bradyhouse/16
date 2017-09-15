@@ -1,4 +1,4 @@
-// app
+
 import { HomeRoutes } from './home/home.routes';
 import { AboutRoutes } from './about/about.routes';
 import { PuzzleRoutes } from './puzzle/puzzle.routes';

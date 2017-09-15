@@ -1,7 +1,7 @@
 // libs
 import { TranslateService, TranslateLoader } from '@ngx-translate/core';
 
-// module
+
 import { MultilingualService } from '../services/index';
 
 // mocks

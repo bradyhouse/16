@@ -12,7 +12,7 @@ let mainWindow: any = null;
 let template: any;
 let menu: any;
 
-// app
+
 import { DesktopConfig } from './app/modules/electron/index';
 
 // Sample

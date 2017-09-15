@@ -894,13 +894,6 @@
             <code>src/client/app/modules/i18n/multilingual.module.ts</code>
         </p>
 
-            <p class="comment">
-                <h3>Description</h3>
-            </p>
-            <p class="comment">
-                <p>Do not specify providers for modules that might be imported by a lazy loaded module.</p>
-
-            </p>
 
         <div class="container-fluid module">
             <div class="row">
@@ -915,23 +908,17 @@ import { CommonModule } from &#x27;@angular/common&#x27;;
 import { FormsModule } from &#x27;@angular/forms&#x27;;
 import { HttpModule, Http } from &#x27;@angular/http&#x27;;
 
-// libs
 import { TranslateModule, TranslateLoader } from &#x27;@ngx-translate/core&#x27;;
 import { TranslateHttpLoader } from &#x27;@ngx-translate/http-loader&#x27;;
 
-// module
+
 import { Config } from &#x27;../core/index&#x27;;
 import { MULTILANG_COMPONENTS } from &#x27;./components/index&#x27;;
 import { MULTILANG_PROVIDERS } from &#x27;./services/index&#x27;;
 
-// for AoT compilation
 export function translateLoaderFactory(http: Http) {
   return new TranslateHttpLoader(http, &#x60;${Config.IS_MOBILE_NATIVE() ? &#x27;/&#x27; : &#x27;&#x27;}assets/i18n/&#x60;, &#x27;.json&#x27;);
 }
-
-/**
- * Do not specify providers for modules that might be imported by a lazy loaded module.
- */
 
 @NgModule({
   imports: [

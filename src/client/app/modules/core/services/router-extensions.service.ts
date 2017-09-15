@@ -1,4 +1,4 @@
-// angular
+
 import { Injectable } from '@angular/core';
 import { LocationStrategy } from '@angular/common';
 import { Router, UrlTree, NavigationExtras } from '@angular/router';

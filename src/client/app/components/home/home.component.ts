@@ -1,7 +1,7 @@
 // libs
 import {Component, ElementRef, ViewChild, OnInit} from '@angular/core';
 
-// app
+
 import {RouterExtensions} from '../../modules/core/services/index';
 
 @Component({

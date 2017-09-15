@@ -1,7 +1,7 @@
-// app
+
 import { ANALYTICS_PROVIDERS } from '../../../analytics/index';
 
-// module
+
 import { WindowService, StorageService, ConsoleService, LogService, LogTarget, ConsoleTarget, LogLevel, RouterExtensions, AppService } from '../../services/index';
 
 // mocks

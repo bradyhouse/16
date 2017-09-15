@@ -1,4 +1,4 @@
-// app
+
 import { ILang } from '../../core/index';
 
 export class DesktopConfig {

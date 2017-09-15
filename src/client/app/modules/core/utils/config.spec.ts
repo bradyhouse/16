@@ -1,10 +1,10 @@
 // libs
 import * as _ from 'lodash';
 
-// app
+
 import { t } from '../../test/index';
 
-// module
+
 import { Config } from './config';
 
 export function main() {

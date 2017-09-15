@@ -1,4 +1,4 @@
-// app
+
 import { ConsoleService } from './console.service';
 import { LogService } from './logging/log.service';
 import { RouterExtensions } from './router-extensions.service';
