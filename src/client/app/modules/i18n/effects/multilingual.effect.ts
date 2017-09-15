@@ -1,7 +1,6 @@
 
 import { Injectable, Inject } from '@angular/core';
 
-s
 import { Store, Action } from '@ngrx/store';
 import { Effect, Actions } from '@ngrx/effects';
 import { includes, map } from 'lodash';

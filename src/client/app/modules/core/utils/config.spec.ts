@@ -1,4 +1,3 @@
-s
 import * as _ from 'lodash';
 
 

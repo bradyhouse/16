@@ -32,7 +32,7 @@
     "karma": "karma",
     "karma.start": "karma start",
     "nativescript-install": "cd nativescript && npm install",
-    "postinstall": "gulp check.versions && gulp build.bundle.rxjs && npm prune && gulp webdriver && npm run nativescript-install && node tools/install.js",
+    "postinstall": "gulp check.versions && gulp build.bundle.rxjs && npm prune && gulp webdriver && npm run nativescript-install && node tools/install.js && gulp print.banner",
     "reinstall": "npm cache clean && npm install",
     "serve.coverage": "gulp serve.coverage --color",
     "serve.dev": "gulp serve.dev --color --env-config dev",

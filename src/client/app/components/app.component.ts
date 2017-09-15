@@ -1,7 +1,6 @@
 // any operators needed throughout your application
 import './operators';
 
-s
 import { Component, OnInit } from '@angular/core';
 
 

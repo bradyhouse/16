@@ -9,7 +9,6 @@ import {
 } from '@angular/http';
 import { MockBackend } from '@angular/http/testing';
 
-s
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 

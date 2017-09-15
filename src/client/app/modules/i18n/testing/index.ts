@@ -1,4 +1,3 @@
-s
 import { TranslateService, TranslateLoader } from '@ngx-translate/core';
 
 

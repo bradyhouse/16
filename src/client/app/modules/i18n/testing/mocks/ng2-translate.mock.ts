@@ -1,7 +1,6 @@
 //angular
 import { EventEmitter } from '@angular/core';
 
-s
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 

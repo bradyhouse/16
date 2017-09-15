@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { Route } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 
-s
 import { StoreModule } from '@ngrx/store';
 import { Angulartics2Module, Angulartics2Segment } from 'angulartics2';
 

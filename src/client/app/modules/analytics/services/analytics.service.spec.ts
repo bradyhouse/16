@@ -2,7 +2,6 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
-s
 import { Angulartics2Module, Angulartics2Segment } from 'angulartics2';
 
 

@@ -1,4 +1,3 @@
-s
 import { Action } from '@ngrx/store';
 
 
