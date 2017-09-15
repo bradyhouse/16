@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 
-// libs
+s
 import { Observable } from 'rxjs/Observable';
 
 

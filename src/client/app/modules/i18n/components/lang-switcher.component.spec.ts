@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { Component } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
 
-// libs
+s
 import { StoreModule } from '@ngrx/store';
 
 import { t } from '../../test/index';

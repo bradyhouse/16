@@ -1,7 +1,7 @@
 
 import { Injectable, InjectionToken } from '@angular/core';
 
-// libs
+s
 import { Store } from '@ngrx/store';
 import { TranslateService } from '@ngx-translate/core';
 

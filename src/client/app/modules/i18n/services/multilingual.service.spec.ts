@@ -2,7 +2,7 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
-// libs
+s
 import { Store, StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { Angulartics2Module, Angulartics2Segment } from 'angulartics2';

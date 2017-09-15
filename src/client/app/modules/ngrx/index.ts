@@ -1,4 +1,4 @@
-// libs
+s
 import { Observable } from 'rxjs/Observable';
 // import { combineLatest } from 'rxjs/observable/combineLatest';
 import { ActionReducer } from '@ngrx/store';

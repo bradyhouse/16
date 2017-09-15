@@ -5,7 +5,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { ResponseOptions, Response, XHRBackend, HttpModule } from '@angular/http';
 import { MockBackend, MockConnection } from '@angular/http/testing';
 
-// libs
+s
 import { Store, StoreModule } from '@ngrx/store';
 import { EffectsTestingModule, EffectsRunner } from '@ngrx/effects/testing';
 

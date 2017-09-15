@@ -1,4 +1,4 @@
-// libs
+s
 import { Component, Inject } from '@angular/core';
 import { Store } from '@ngrx/store';
 

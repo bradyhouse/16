@@ -1,7 +1,7 @@
 
 import { Injectable, Inject } from '@angular/core';
 
-// libs
+s
 import * as _ from 'lodash';
 import { Angulartics2, Angulartics2Segment } from 'angulartics2';
 
