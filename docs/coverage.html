@@ -45,7 +45,7 @@
                                     </a>
                                 </li>
                                 <li class="link">
-                                  <a href="./index.html"  class="active" ><span class="fa fa-file-text-o"></span>README</a>
+                                  <a href="./index.html" ><span class="fa fa-file-text-o"></span>README</a>
                                 </li>
                                 <li class="link">
                                     <a href="./license.html"
@@ -424,7 +424,7 @@
             
             
                     <li class="chapter">
-                        <a data-type="chapter-link" href="./coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                        <a data-type="chapter-link" href="./coverage.html"  class="active" ><span class="fa fa-tasks"></span>Documentation coverage</a>
                     </li>
             
                     <li class="divider"></li>
@@ -469,7 +469,7 @@
                                            </a>
                                        </li>
                                        <li class="link">
-                                         <a href="./index.html"  class="active" ><span class="fa fa-file-text-o"></span>README</a>
+                                         <a href="./index.html" ><span class="fa fa-file-text-o"></span>README</a>
                                        </li>
                                        <li class="link">
                                            <a href="./license.html"
@@ -848,7 +848,7 @@
                    
                    
                            <li class="chapter">
-                               <a data-type="chapter-link" href="./coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                               <a data-type="chapter-link" href="./coverage.html"  class="active" ><span class="fa fa-tasks"></span>Documentation coverage</a>
                            </li>
                    
                            <li class="divider"></li>
@@ -862,84 +862,9 @@
                    
                    </nav>
                </div>
-               <div class="content getting-started">
+               <div class="content coverage">
                    <div class="content-data">
 
-<p><a href="https://travis-ci.org/bradyhouse/16"><img src="https://travis-ci.org/bradyhouse/16.svg?branch=master" alt="Build Status" class="img-responsive"></a> 
-<a href="http://waffle.io/bradyhouse/16"><img src="https://badge.waffle.io/bradyhouse/16.svg?label=in%20progress&amp;title=Stories%20In%20Progress" alt="Stories in Progress" class="img-responsive"></a>
-<a href="https://david-dm.org/bradyhouse/16"><img src="https://david-dm.org/bradyhouse/16/status.svg" alt="dependencies Status" class="img-responsive"></a>
-<a href="https://david-dm.org/bradyhouse/16?type=dev"><img src="https://david-dm.org/bradyhouse/16/dev-status.svg" alt="devDependencies Status" class="img-responsive"></a>
-<a href="http://opensource.org/licenses/MIT"><img src="http://img.shields.io/badge/license-MIT-brightgreen.svg" alt="MIT license" class="img-responsive"></a></p>
-<h1 id="puzzle-16">Puzzle 16</h1>
-<p><img src="http://i.imgur.com/s0CIHaV.png" alt="Icon" class="img-responsive"></p>
-<p>Puzzle 16 is a game inspired by <a href="http://www.enipuzzles.com/">Eni Puzzle</a>. The android and iOS versions of the
-app are currently under construction.</p>
-<h1 id="table-of-contents">Table of Contents</h1>
-<ul>
-<li><a href="#prerequisites">Prerequisites</a></li>
-<li><a href="#how-to-start">How to start</a></li>
-<li><a href="#running-tests">Running tests</a></li>
-<li><a href="#license">License</a></li>
-</ul>
-<h3 id="prerequisites">Prerequisites</h3>
-<p><strong>Note</strong> you should have <strong>node v6.5.0 or higher</strong> and <strong>npm 3.10.3 or higher</strong>.</p>
-<ul>
-<li>To run the NativeScript app:</li>
-</ul>
-<pre class="line-numbers"><code class="language-none">npm install -g nativescript
-npm install -g typescript</code></pre><h2 id="how-to-start">How to start</h2>
-<pre class="line-numbers"><code class="language-bash"># install the project&#39;s dependencies
-$ npm install
-# fast install (via Yarn, https://yarnpkg.com)
-$ yarn install  # or yarn
-
-# watches your files and uses livereload by default
-$ npm start
-# api document for the app
-# npm run build.docs
-
-# generate api documentation
-$ npm run compodoc
-$ npm run serve.compodoc
-
-# to start deving with livereload site and coverage as well as continuous testing
-$ npm run start.deving
-
-# dev build
-$ npm run build.dev
-# prod build
-$ npm run build.prod</code></pre><h2 id="running-tests">Running tests</h2>
-<pre class="line-numbers"><code class="language-bash">$ npm test
-
-# Development. Your app will be watched by karma
-# on each change all your specs will be executed.
-$ npm run test.watch
-# NB: The command above might fail with a &quot;EMFILE: too many open files&quot; error.
-# Some OS have a small limit of opened file descriptors (256) by default
-# and will result in the EMFILE error.
-# You can raise the maximum of file descriptors by running the command below:
-$ ulimit -n 10480
-
-
-# code coverage (istanbul)
-# auto-generated at the end of `npm test`
-# view coverage report:
-$ npm run serve.coverage
-
-# e2e (aka. end-to-end, integration) - In three different shell windows
-# Make sure you don&#39;t have a global instance of Protractor
-
-# npm install webdriver-manager &lt;- Install this first for e2e testing
-# npm run webdriver-update &lt;- You will need to run this the first time
-$ npm run webdriver-start
-$ npm run serve.e2e
-$ npm run e2e
-
-# e2e live mode - Protractor interactive mode
-# Instead of last command above, you can use:
-$ npm run e2e.live</code></pre><p>You can learn more about <a href="https://github.com/angular/protractor/blob/master/docs/debugging.md#testing-out-protractor-interactively">Protractor Interactive Mode here</a></p>
-<h2 id="license">License</h2>
-<p>MIT</p>
 
 
 
@@ -951,7 +876,1185 @@ $ npm run e2e.live</code></pre><p>You can learn more about <a href="https://gith
 
 
 
+<ol class="breadcrumb">
+  <li>Documentation coverage</li>
+</ol>
 
+<img src="./images/coverage-badge.svg">
+
+<table class="table table-bordered coverage" id="coverage-table">
+    <thead class="coverage-header">
+        <tr>
+            <th>File</th>
+            <th>Type</th>
+            <th>Identifier</th>
+            <th style="text-align:right" class="statements" data-sort-default>Statements</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="low">
+            <td>
+                <a href="./components/AboutComponent.html">src/client/app/components/about/about.component.ts</a>
+            </td>
+            <td>
+                component
+            </td>
+            <td>
+                AboutComponent
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/10)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./components/AppComponent.html">src/client/app/components/app.component.ts</a>
+            </td>
+            <td>
+                component
+            </td>
+            <td>
+                AppComponent
+            </td>
+            <td align="right" data-sort="25">
+                <span class="coverage-percent">25 %</span>
+                <span class="coverage-count">(1/4)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./components/HomeComponent.html">src/client/app/components/home/home.component.ts</a>
+            </td>
+            <td>
+                component
+            </td>
+            <td>
+                HomeComponent
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/9)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./injectables/PuzzleStateService.html">src/client/app/components/puzzle/puzzle-state.service.ts</a>
+            </td>
+            <td>
+                injectable
+            </td>
+            <td>
+                PuzzleStateService
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/2)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./components/PuzzleComponent.html">src/client/app/components/puzzle/puzzle.component.ts</a>
+            </td>
+            <td>
+                component
+            </td>
+            <td>
+                PuzzleComponent
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/25)</span>
+            </td>
+        </tr>
+        <tr class="medium">
+            <td>
+                <a href="./classes/Analytics.html">src/client/app/modules/analytics/services/analytics.service.ts</a>
+            </td>
+            <td>
+                class
+            </td>
+            <td>
+                Analytics
+            </td>
+            <td align="right" data-sort="40">
+                <span class="coverage-percent">40 %</span>
+                <span class="coverage-count">(2/5)</span>
+            </td>
+        </tr>
+        <tr class="good">
+            <td>
+                <a href="./injectables/AnalyticsService.html">src/client/app/modules/analytics/services/analytics.service.ts</a>
+            </td>
+            <td>
+                injectable
+            </td>
+            <td>
+                AnalyticsService
+            </td>
+            <td align="right" data-sort="83">
+                <span class="coverage-percent">83 %</span>
+                <span class="coverage-count">(5/6)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./interfaces/IAnalytics.html">src/client/app/modules/analytics/services/analytics.service.ts</a>
+            </td>
+            <td>
+                interface
+            </td>
+            <td>
+                IAnalytics
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/2)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./interfaces/IAnalyticsProperties.html">src/client/app/modules/analytics/services/analytics.service.ts</a>
+            </td>
+            <td>
+                interface
+            </td>
+            <td>
+                IAnalyticsProperties
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/4)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./interfaces/ICoreModuleOptions.html">src/client/app/modules/core/core.module.ts</a>
+            </td>
+            <td>
+                interface
+            </td>
+            <td>
+                ICoreModuleOptions
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/3)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./directives/PlatformDirective.html">src/client/app/modules/core/directives/platform.directive.ts</a>
+            </td>
+            <td>
+                directive
+            </td>
+            <td>
+                PlatformDirective
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/2)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./interfaces/IConsole.html">src/client/app/modules/core/interfaces/iconsole.ts</a>
+            </td>
+            <td>
+                interface
+            </td>
+            <td>
+                IConsole
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/6)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./interfaces/ILang.html">src/client/app/modules/core/interfaces/ilang.ts</a>
+            </td>
+            <td>
+                interface
+            </td>
+            <td>
+                ILang
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/3)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./interfaces/IStorage.html">src/client/app/modules/core/interfaces/istorage.ts</a>
+            </td>
+            <td>
+                interface
+            </td>
+            <td>
+                IStorage
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/4)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./interfaces/IWindow.html">src/client/app/modules/core/interfaces/iwindow.ts</a>
+            </td>
+            <td>
+                interface
+            </td>
+            <td>
+                IWindow
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/5)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./injectables/AppService.html">src/client/app/modules/core/services/app.service.ts</a>
+            </td>
+            <td>
+                injectable
+            </td>
+            <td>
+                AppService
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/4)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./injectables/ConsoleService.html">src/client/app/modules/core/services/console.service.ts</a>
+            </td>
+            <td>
+                injectable
+            </td>
+            <td>
+                ConsoleService
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/6)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./injectables/ConsoleTarget.html">src/client/app/modules/core/services/logging/console.target.ts</a>
+            </td>
+            <td>
+                injectable
+            </td>
+            <td>
+                ConsoleTarget
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/3)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./injectables/LogService.html">src/client/app/modules/core/services/logging/log.service.ts</a>
+            </td>
+            <td>
+                injectable
+            </td>
+            <td>
+                LogService
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/7)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./classes/LogTarget.html">src/client/app/modules/core/services/logging/log.target.ts</a>
+            </td>
+            <td>
+                class
+            </td>
+            <td>
+                LogTarget
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/2)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./classes/LogTargetBase.html">src/client/app/modules/core/services/logging/log.target.ts</a>
+            </td>
+            <td>
+                class
+            </td>
+            <td>
+                LogTargetBase
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/4)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./classes/LogTargetOptions.html">src/client/app/modules/core/services/logging/log.target.ts</a>
+            </td>
+            <td>
+                class
+            </td>
+            <td>
+                LogTargetOptions
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/2)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./interfaces/LogEvent.html">src/client/app/modules/core/services/logging/log.target.ts</a>
+            </td>
+            <td>
+                interface
+            </td>
+            <td>
+                LogEvent
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/3)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./injectables/RouterExtensions.html">src/client/app/modules/core/services/router-extensions.service.ts</a>
+            </td>
+            <td>
+                injectable
+            </td>
+            <td>
+                RouterExtensions
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/6)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./interfaces/ExtendedNavigationExtras.html">src/client/app/modules/core/services/router-extensions.service.ts</a>
+            </td>
+            <td>
+                interface
+            </td>
+            <td>
+                ExtendedNavigationExtras
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/4)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./interfaces/IRouterExtensions.html">src/client/app/modules/core/services/router-extensions.service.ts</a>
+            </td>
+            <td>
+                interface
+            </td>
+            <td>
+                IRouterExtensions
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/4)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./injectables/StorageService.html">src/client/app/modules/core/services/storage.service.ts</a>
+            </td>
+            <td>
+                injectable
+            </td>
+            <td>
+                StorageService
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/4)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./injectables/WindowService.html">src/client/app/modules/core/services/window.service.ts</a>
+            </td>
+            <td>
+                injectable
+            </td>
+            <td>
+                WindowService
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/5)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./classes/MockPopStateEvent.html">src/client/app/modules/core/testing/mocks/mock-location-strategy.ts</a>
+            </td>
+            <td>
+                class
+            </td>
+            <td>
+                MockPopStateEvent
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/5)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./injectables/MockLocationStrategy.html">src/client/app/modules/core/testing/mocks/mock-location-strategy.ts</a>
+            </td>
+            <td>
+                injectable
+            </td>
+            <td>
+                MockLocationStrategy
+            </td>
+            <td align="right" data-sort="6">
+                <span class="coverage-percent">6 %</span>
+                <span class="coverage-count">(1/16)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./classes/ConfigMock.html">src/client/app/modules/core/testing/mocks/ng2-config.mock.ts</a>
+            </td>
+            <td>
+                class
+            </td>
+            <td>
+                ConfigMock
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/3)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./injectables/RouterExtensionsMock.html">src/client/app/modules/core/testing/mocks/router-extensions.mock.ts</a>
+            </td>
+            <td>
+                injectable
+            </td>
+            <td>
+                RouterExtensionsMock
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/4)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./classes/WindowMock.html">src/client/app/modules/core/testing/mocks/window.mock.ts</a>
+            </td>
+            <td>
+                class
+            </td>
+            <td>
+                WindowMock
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/5)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./classes/WindowMockFrench.html">src/client/app/modules/core/testing/mocks/window.mock.ts</a>
+            </td>
+            <td>
+                class
+            </td>
+            <td>
+                WindowMockFrench
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/2)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./classes/WindowMockNoLanguage.html">src/client/app/modules/core/testing/mocks/window.mock.ts</a>
+            </td>
+            <td>
+                class
+            </td>
+            <td>
+                WindowMockNoLanguage
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/2)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./classes/Config.html">src/client/app/modules/core/utils/config.ts</a>
+            </td>
+            <td>
+                class
+            </td>
+            <td>
+                Config
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/13)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./interfaces/EnvConfig.html">src/client/app/modules/core/utils/config.ts</a>
+            </td>
+            <td>
+                interface
+            </td>
+            <td>
+                EnvConfig
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/3)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./interfaces/IPlatforms.html">src/client/app/modules/core/utils/config.ts</a>
+            </td>
+            <td>
+                interface
+            </td>
+            <td>
+                IPlatforms
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/5)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./classes/ElectronEventService.html">src/client/app/modules/electron/services/event.service.ts</a>
+            </td>
+            <td>
+                class
+            </td>
+            <td>
+                ElectronEventService
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/2)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./classes/DesktopConfig.html">src/client/app/modules/electron/utils/desktop-config.ts</a>
+            </td>
+            <td>
+                class
+            </td>
+            <td>
+                DesktopConfig
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/2)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./classes/ChangeAction.html">src/client/app/modules/i18n/actions/multilingual.action.ts</a>
+            </td>
+            <td>
+                class
+            </td>
+            <td>
+                ChangeAction
+            </td>
+            <td align="right" data-sort="25">
+                <span class="coverage-percent">25 %</span>
+                <span class="coverage-count">(1/4)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./classes/LangChangedAction.html">src/client/app/modules/i18n/actions/multilingual.action.ts</a>
+            </td>
+            <td>
+                class
+            </td>
+            <td>
+                LangChangedAction
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/4)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./classes/LangUnsupportedAction.html">src/client/app/modules/i18n/actions/multilingual.action.ts</a>
+            </td>
+            <td>
+                class
+            </td>
+            <td>
+                LangUnsupportedAction
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/4)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./interfaces/IMultilingualActions.html">src/client/app/modules/i18n/actions/multilingual.action.ts</a>
+            </td>
+            <td>
+                interface
+            </td>
+            <td>
+                IMultilingualActions
+            </td>
+            <td align="right" data-sort="25">
+                <span class="coverage-percent">25 %</span>
+                <span class="coverage-count">(1/4)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./components/LangSwitcherComponent.html">src/client/app/modules/i18n/components/lang-switcher.component.ts</a>
+            </td>
+            <td>
+                component
+            </td>
+            <td>
+                LangSwitcherComponent
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/6)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./injectables/MultilingualEffects.html">src/client/app/modules/i18n/effects/multilingual.effect.ts</a>
+            </td>
+            <td>
+                injectable
+            </td>
+            <td>
+                MultilingualEffects
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/3)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./injectables/MultilingualService.html">src/client/app/modules/i18n/services/multilingual.service.ts</a>
+            </td>
+            <td>
+                injectable
+            </td>
+            <td>
+                MultilingualService
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/3)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./interfaces/IMultilingualState.html">src/client/app/modules/i18n/states/multilingual.state.ts</a>
+            </td>
+            <td>
+                interface
+            </td>
+            <td>
+                IMultilingualState
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/2)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./classes/ConfigMockMultilang.html">src/client/app/modules/i18n/testing/mocks/ng2-config-multilang.mock.ts</a>
+            </td>
+            <td>
+                class
+            </td>
+            <td>
+                ConfigMockMultilang
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/3)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./classes/TranslateLoaderMock.html">src/client/app/modules/i18n/testing/mocks/ng2-translate-loader.mock.ts</a>
+            </td>
+            <td>
+                class
+            </td>
+            <td>
+                TranslateLoaderMock
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/1)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./classes/TranslateMock.html">src/client/app/modules/i18n/testing/mocks/ng2-translate.mock.ts</a>
+            </td>
+            <td>
+                class
+            </td>
+            <td>
+                TranslateMock
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/9)</span>
+            </td>
+        </tr>
+        <tr class="medium">
+            <td>
+                <a href="./interfaces/IAppState.html">src/client/app/modules/ngrx/index.ts</a>
+            </td>
+            <td>
+                interface
+            </td>
+            <td>
+                IAppState
+            </td>
+            <td align="right" data-sort="33">
+                <span class="coverage-percent">33 %</span>
+                <span class="coverage-count">(1/3)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./interfaces/ActionsServiceInterface.html">src/client/app/modules/puzzle/actions/actions-service.interface.ts</a>
+            </td>
+            <td>
+                interface
+            </td>
+            <td>
+                ActionsServiceInterface
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/4)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./injectables/ActionsService.html">src/client/app/modules/puzzle/actions/actions.service.ts</a>
+            </td>
+            <td>
+                injectable
+            </td>
+            <td>
+                ActionsService
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/7)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./classes/PuzzleConfig.html">src/client/app/modules/puzzle/common/puzzle-config.common.ts</a>
+            </td>
+            <td>
+                class
+            </td>
+            <td>
+                PuzzleConfig
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/5)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./classes/Utils.html">src/client/app/modules/puzzle/common/utils.common.ts</a>
+            </td>
+            <td>
+                class
+            </td>
+            <td>
+                Utils
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/12)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./classes/BaseComponent.html">src/client/app/modules/puzzle/components/base.component.ts</a>
+            </td>
+            <td>
+                class
+            </td>
+            <td>
+                BaseComponent
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/7)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./interfaces/ToolbarOptionsInterface.html">src/client/app/modules/puzzle/components/toolbar/toolbar-options.interface.ts</a>
+            </td>
+            <td>
+                interface
+            </td>
+            <td>
+                ToolbarOptionsInterface
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/11)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./components/ToolbarComponent.html">src/client/app/modules/puzzle/components/toolbar/toolbar.component.ts</a>
+            </td>
+            <td>
+                component
+            </td>
+            <td>
+                ToolbarComponent
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/15)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./interfaces/ToolbarInterface.html">src/client/app/modules/puzzle/components/toolbar/toolbar.interface.ts</a>
+            </td>
+            <td>
+                interface
+            </td>
+            <td>
+                ToolbarInterface
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/9)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./interfaces/ModelInterface.html">src/client/app/modules/puzzle/interfaces/model.interface.ts</a>
+            </td>
+            <td>
+                interface
+            </td>
+            <td>
+                ModelInterface
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/2)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./classes/BaseService.html">src/client/app/modules/puzzle/services/base.service.ts</a>
+            </td>
+            <td>
+                class
+            </td>
+            <td>
+                BaseService
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/8)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./classes/Board.html">src/client/app/modules/puzzle/services/board/board.model.ts</a>
+            </td>
+            <td>
+                class
+            </td>
+            <td>
+                Board
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/10)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./injectables/BoardService.html">src/client/app/modules/puzzle/services/board/board.service.ts</a>
+            </td>
+            <td>
+                injectable
+            </td>
+            <td>
+                BoardService
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/19)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./classes/Row.html">src/client/app/modules/puzzle/services/board/row.model.ts</a>
+            </td>
+            <td>
+                class
+            </td>
+            <td>
+                Row
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/8)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./classes/Square.html">src/client/app/modules/puzzle/services/board/square.model.ts</a>
+            </td>
+            <td>
+                class
+            </td>
+            <td>
+                Square
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/9)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./classes/ConfigRecord.html">src/client/app/modules/puzzle/services/database/config-record.model.ts</a>
+            </td>
+            <td>
+                class
+            </td>
+            <td>
+                ConfigRecord
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/5)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./interfaces/DatabaseServiceInterface.html">src/client/app/modules/puzzle/services/database/database-service.interface.ts</a>
+            </td>
+            <td>
+                interface
+            </td>
+            <td>
+                DatabaseServiceInterface
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/8)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./injectables/LocalStorageService.html">src/client/app/modules/puzzle/services/database/local-storage.service.ts</a>
+            </td>
+            <td>
+                injectable
+            </td>
+            <td>
+                LocalStorageService
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/8)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./interfaces/StateServiceInterface.html">src/client/app/modules/puzzle/services/state/state-service.interface.ts</a>
+            </td>
+            <td>
+                interface
+            </td>
+            <td>
+                StateServiceInterface
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/4)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./injectables/StateService.html">src/client/app/modules/puzzle/services/state/state.service.ts</a>
+            </td>
+            <td>
+                injectable
+            </td>
+            <td>
+                StateService
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/7)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./injectables/SampleEffects.html">src/client/app/modules/sample/effects/sample.effect.ts</a>
+            </td>
+            <td>
+                injectable
+            </td>
+            <td>
+                SampleEffects
+            </td>
+            <td align="right" data-sort="25">
+                <span class="coverage-percent">25 %</span>
+                <span class="coverage-count">(1/4)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./injectables/NameListService.html">src/client/app/modules/sample/services/name-list.service.ts</a>
+            </td>
+            <td>
+                injectable
+            </td>
+            <td>
+                NameListService
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/4)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./interfaces/ISampleState.html">src/client/app/modules/sample/states/sample.state.ts</a>
+            </td>
+            <td>
+                interface
+            </td>
+            <td>
+                ISampleState
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/2)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./components/NavbarComponent.html">src/client/app/modules/shared/components/navbar/navbar.component.ts</a>
+            </td>
+            <td>
+                component
+            </td>
+            <td>
+                NavbarComponent
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/1)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./components/ToolbarComponent.html">src/client/app/modules/shared/components/toolbar/toolbar.component.ts</a>
+            </td>
+            <td>
+                component
+            </td>
+            <td>
+                ToolbarComponent
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/3)</span>
+            </td>
+        </tr>
+        <tr class="low">
+            <td>
+                <a href="./interfaces/TestApi.html">src/client/app/modules/test/shorthand/ng2-jasmine.ts</a>
+            </td>
+            <td>
+                interface
+            </td>
+            <td>
+                TestApi
+            </td>
+            <td align="right" data-sort="0">
+                <span class="coverage-percent">0 %</span>
+                <span class="coverage-count">(0/20)</span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<script src="js/libs/tablesort.min.js"></script>
+<script src="js/libs/tablesort.number.min.js"></script>
+<script>
+    new Tablesort(document.getElementById('coverage-table'));
+</script>
 
                    </div><div class="search-results">
     <div class="has-results">
