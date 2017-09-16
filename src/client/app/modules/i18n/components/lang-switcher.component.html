@@ -1,8 +1,7 @@
 <form class="form-horizontal">
     <fieldset>
-        <div class="form-group pad2y">
-            <label for="selectLanguage" class="control-label pull-left">{{'CHANGE_LANGUAGE' | translate}}:&nbsp;&nbsp;</label>
-            <div class="pad2x pad2y pull-right">
+        <div class="form-group">
+            <div class="pull-right">
                 <select [(ngModel)]="lang" id="selectLanguage" class="form-control" (change)="changeLang($event)" name="lang">
                     <option *ngFor="let l of supportedLanguages" [value]="l.code">{{l.title | translate}}</option>
                 </select>

@@ -899,7 +899,6 @@
         </p>
 
 
-
         <section>
             <h3 id="index">Index</h3>
             <table class="table table-sm table-bordered index-table">
@@ -937,12 +936,45 @@
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="category"></a>
-                                        <span class="name"><b>category</b><a href="#category"><span class="fa fa-link"></span></a></span>
+                                        <b>category</b>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
                                         <code>category:     <code><a href="../TestApis/t.html" target="_self" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>    <code><a href="../TestApis/t.html" target="_self" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/client/app/modules/analytics/services/analytics.service.ts:8</a></div>
+                                        </td>
+                                    </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="label"></a>
+                                        <b>label</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>label:     <code><a href="../TestApis/t.html" target="_self" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -969,41 +1001,8 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="label"></a>
-                                        <span class="name"><b>label</b><a href="#label"><span class="fa fa-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>label:     <code><a href="../TestApis/t.html" target="_self" >string</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>    <code><a href="../TestApis/t.html" target="_self" >string</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/client/app/modules/analytics/services/analytics.service.ts:10</a></div>
-                                        </td>
-                                    </tr>
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
                                         <a name="value"></a>
-                                        <span class="name"><b>value</b><a href="#value"><span class="fa fa-link"></span></a></span>
+                                        <b>value</b>
                                     </td>
                                 </tr>
                                 <tr>
@@ -1025,7 +1024,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/client/app/modules/analytics/services/analytics.service.ts:11</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/client/app/modules/analytics/services/analytics.service.ts:10</a></div>
                                         </td>
                                     </tr>
 
@@ -1038,7 +1037,6 @@
     <div class="tab-pane fade tab-source-code" id="source">
         <pre class="line-numbers"><code class="language-typescript">import { Injectable, Inject } from &#x27;@angular/core&#x27;;
 
-s
 import * as _ from &#x27;lodash&#x27;;
 import { Angulartics2, Angulartics2Segment } from &#x27;angulartics2&#x27;;
 
@@ -1061,10 +1059,10 @@ export class AnalyticsService implements IAnalytics {
   constructor(private angulartics2: Angulartics2, private segment: Angulartics2Segment) {
     // options
     // https://github.com/angulartics/angulartics2/blob/master/src/core/angulartics2.ts#L90-L104
-    tics2.virtualPageviews(value: boolean);
+    /*tics2.virtualPageviews(value: boolean);
     tics2.excludeRoutes(routes: Array&lt;string&gt;);
     tics2.firstPageview(value: boolean);
-    tics2.withBase(value: string);
+    tics2.withBase(value: string);*/
 
     this.devMode(false);
   }

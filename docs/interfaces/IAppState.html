@@ -907,7 +907,6 @@ our top level state interface is just a map of keys to inner state types.</p>
 
             </p>
 
-
         <section>
             <h3 id="index">Index</h3>
             <table class="table table-sm table-bordered index-table">
@@ -942,12 +941,39 @@ our top level state interface is just a map of keys to inner state types.</p>
                                 <tr>
                                     <td class="col-md-4">
                                         <a name="i18n"></a>
-                                        <span class="name"><b>i18n</b><a href="#i18n"><span class="fa fa-link"></span></a></span>
+                                        <b>i18n</b>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
                                         <code>i18n:     <code></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/client/app/modules/ngrx/index.ts:47</a></div>
+                                        </td>
+                                    </tr>
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="sample"></a>
+                                        <b>sample</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>sample:     <code></code>
 </code>
                                     </td>
                                 </tr>
@@ -964,40 +990,12 @@ our top level state interface is just a map of keys to inner state types.</p>
 
                         </tbody>
                     </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="sample"></a>
-                                        <span class="name"><b>sample</b><a href="#sample"><span class="fa fa-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>sample:     <code></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/client/app/modules/ngrx/index.ts:49</a></div>
-                                        </td>
-                                    </tr>
-
-                        </tbody>
-                    </table>
             </section>
     </div>
 
 
     <div class="tab-pane fade tab-source-code" id="source">
-        <pre class="line-numbers"><code class="language-typescript">s
-import { Observable } from &#x27;rxjs/Observable&#x27;;
+        <pre class="line-numbers"><code class="language-typescript">import { Observable } from &#x27;rxjs/Observable&#x27;;
 // import { combineLatest } from &#x27;rxjs/observable/combineLatest&#x27;;
 import { ActionReducer } from &#x27;@ngrx/store&#x27;;
 import &#x27;@ngrx/core/add/operator/select&#x27;;

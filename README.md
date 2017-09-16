@@ -9,8 +9,9 @@ Puzzle 16
 
 ![Icon](http://i.imgur.com/s0CIHaV.png)
 
-Puzzle 16 is a game inspired by [Eni Puzzle](http://www.enipuzzles.com/). The android and iOS versions of the
-app are currently under construction.
+Puzzle 16 is a game inspired by [Eni Puzzle](http://www.enipuzzles.com/). The web-based version is currently published
+on github => [http://bradyhouse.github.io/sixteen](http://bradyhouse.github.io/sixteen/#/). The android and iOS versions of the
+app are currently under construction. 
 
 # Table of Contents
 
