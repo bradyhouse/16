@@ -1,7 +1,7 @@
-import {Component, ElementRef, ViewChild, OnInit} from '@angular/core';
+import {Component, ElementRef, ViewChild, OnInit, AfterViewInit} from '@angular/core';
 
 
-import {RouterExtensions} from '../../modules/core/services/index';
+import {AppService, RouterExtensions} from '../../modules/core/services/index';
 
 @Component({
   moduleId: module.id,
@@ -9,23 +9,25 @@ import {RouterExtensions} from '../../modules/core/services/index';
   templateUrl: 'home.component.html',
   styleUrls: ['home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit {
 
   @ViewChild('el') el: ElementRef;
   height: number;
   timeOut: any;
 
-  constructor(public routerExt: RouterExtensions) {
+  constructor(private _appService: AppService,
+              public routerExt: RouterExtensions) {
   }
 
   ngOnInit() {
-
     if (typeof document === 'object' && document.title) {
       document.title = 'home';
       this._calcHeight();
     }
+  }
 
-
+  ngAfterViewInit(): void {
+    this._appService.isPreloader = false;
   }
 
   onWindowResize(event: any) {

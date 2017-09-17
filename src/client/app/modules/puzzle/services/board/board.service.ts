@@ -211,6 +211,14 @@ export class BoardService {
     }
   }
 
+  canShiftY(up: boolean, square: Square) {
+    if (up) {
+      return square.col === this.emptySquare.col && square.row > this.emptySquare.row ? true : false;
+    } else {
+      return square.col === this.emptySquare.col && square.row < this.emptySquare.row ? true : false;
+    }
+  }
+
   shiftX(left: boolean = false, square: Square): void {
     let squareIndices: number[] = [],
         emptySquareIndices: number[] = [];
@@ -251,4 +259,46 @@ export class BoardService {
       }
     }
   }
+
+  shiftY(up: boolean = false, square: Square): void {
+    let squareIndices: number[] = [],
+      emptySquareIndices: number[] = [];
+
+    if (this.board && this.board.squares && this.board.squares.length) {
+      this.board.squares.forEach((s: Square, index: number) => {
+        if (s.col === this.emptySquare.col) {
+          squareIndices.push(index);
+        }
+      });
+      if (squareIndices.length === 8) {
+        if (up) {
+          Utils.swap(this.board.squares[squareIndices[0]], this.board.squares[squareIndices[1]]);
+          Utils.swap(this.board.squares[squareIndices[1]], this.board.squares[squareIndices[2]]);
+          Utils.swap(this.board.squares[squareIndices[2]], this.board.squares[squareIndices[3]]);
+          Utils.swap(this.board.squares[squareIndices[3]], this.board.squares[squareIndices[4]]);
+          Utils.swap(this.board.squares[squareIndices[4]], this.board.squares[squareIndices[5]]);
+          Utils.swap(this.board.squares[squareIndices[5]], this.board.squares[squareIndices[6]]);
+          Utils.swap(this.board.squares[squareIndices[6]], this.board.squares[squareIndices[7]]);
+        } else {
+          Utils.swap(this.board.squares[squareIndices[7]], this.board.squares[squareIndices[6]]);
+          Utils.swap(this.board.squares[squareIndices[6]], this.board.squares[squareIndices[5]]);
+          Utils.swap(this.board.squares[squareIndices[5]], this.board.squares[squareIndices[4]]);
+          Utils.swap(this.board.squares[squareIndices[4]], this.board.squares[squareIndices[3]]);
+          Utils.swap(this.board.squares[squareIndices[3]], this.board.squares[squareIndices[2]]);
+          Utils.swap(this.board.squares[squareIndices[2]], this.board.squares[squareIndices[1]]);
+          Utils.swap(this.board.squares[squareIndices[1]], this.board.squares[squareIndices[0]]);
+        }
+
+        emptySquareIndices = squareIndices.filter((indice: number) => {
+          return this.board.squares[indice].isEmpty;
+        });
+
+        if (emptySquareIndices.length) {
+          this.emptySquare = this.board.squares[emptySquareIndices[0]];
+        }
+        this.persist();
+      }
+    }
+  }
+
 }

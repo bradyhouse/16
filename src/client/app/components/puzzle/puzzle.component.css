@@ -14,6 +14,10 @@
   border-width: 1px;
 }
 
+.puzzle-component input:focus{
+  outline: none;
+}
+
 .puzzle-component .col-a {
   width: calc(12vw);
   height: calc(10vh);

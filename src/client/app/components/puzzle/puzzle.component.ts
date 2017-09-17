@@ -1,5 +1,6 @@
-import {Component, OnDestroy, Injector, OnInit} from '@angular/core';
+import {Component, OnDestroy, Injector, OnInit, AfterViewInit} from '@angular/core';
 import {ISubscription} from 'rxjs/Subscription';
+import {AppService} from '../../modules/core/services/index';
 import {
   ToolbarOptionsInterface,
   ActionsService,
@@ -21,7 +22,7 @@ import {PuzzleStateService} from './puzzle-state.service';
   templateUrl: './puzzle.component.html',
   styleUrls: ['./puzzle.component.css']
 })
-export class PuzzleComponent implements OnInit, OnDestroy {
+export class PuzzleComponent implements OnInit, OnDestroy, AfterViewInit {
   toolbarOptions: ToolbarOptionsInterface;
   fiddleTitle: string;
   board: Board;
@@ -30,7 +31,8 @@ export class PuzzleComponent implements OnInit, OnDestroy {
   dragOverSquare: Square;
   tnsDelayedTask: any;
 
-  constructor(private injector: Injector,
+  constructor(private _appService: AppService,
+              private injector: Injector,
               private _boardService: BoardService,
               private _gameStateService: PuzzleStateService,
               private _actionService: ActionsService) {
@@ -61,8 +63,14 @@ export class PuzzleComponent implements OnInit, OnDestroy {
       document.title = 'Puzzle';
     }
   }
+
   ngOnDestroy() {
     this.clearSubscriptions();
+  }
+
+
+  ngAfterViewInit(): void {
+    this._appService.isPreloader = false;
   }
 
   onSquareClick($event: any): void {
@@ -84,29 +92,46 @@ export class PuzzleComponent implements OnInit, OnDestroy {
     }
   }
 
-
   onSquareDragStart($event: any, square: Square) {
     this.startDragSquare = square;
     $event.dataTransfer.dropEffect = 'move';
   }
 
   onSquareDragEnd($event: any, square: Square) {
-    if(this.startDragSquare && this.dragOverSquare) {
+    if (this.startDragSquare && this.dragOverSquare) {
       if (this.startDragSquare.row === this.dragOverSquare.row) {
         return this.onHorizontalDragEnd($event, square);
       }
-      /*if (this.startDragSquare.col === this.dragOverSquare.col) {
+      if (this.startDragSquare.col === this.dragOverSquare.col) {
        return this.onVerticalDragEnd($event, square);
-       }*/
+      }
     }
     this.startDragSquare = null;
     this.dragOverSquare = null;
   }
 
   onVerticalDragEnd($event: any, square: Square) {
+    let repY: number = Math.abs(this.startDragSquare.row - this.dragOverSquare.row),
+      i: number = 1;
+    if (repY) {
+      for (; i <= repY; i++) {
+        if (this.startDragSquare.row < this.dragOverSquare.row) {
+          if (this._boardService.canShiftY(false, this.startDragSquare)) {
+            setTimeout(() => {
+              this._boardService.shiftY(false, square);
+            }, i * 66);
+          }
+        } else {
+          if (this._boardService.canShiftY(true, this.startDragSquare)) {
+            setTimeout(() => {
+              this._boardService.shiftY(true, square);
+            }, i * 66);
+          }
+        }
+      }
 
 
-
+    }
     this.startDragSquare = null;
     this.dragOverSquare = null;
   }
@@ -211,7 +236,7 @@ export class PuzzleComponent implements OnInit, OnDestroy {
       this.tnsDelayedTask = null;
     }
 
-    switch(args.direction) {
+    switch (args.direction) {
       case 1:
         this.tnsDelayedTask = setTimeout(() => {
           this._boardService.shiftX(false, square);

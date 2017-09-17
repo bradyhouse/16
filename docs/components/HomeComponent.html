@@ -905,6 +905,7 @@
     </p>
     <p class="comment">
                 <code><a href="../TestApis/t.html" target="_self" >OnInit</a></code>
+                <code><a href="../TestApis/t.html" target="_self" >AfterViewInit</a></code>
     </p>
 
 
@@ -989,6 +990,9 @@
                                 <span class="modifier">Private</span> <a href="#_calcHeight">_calcHeight</a>
                             </li>
                             <li>
+                                 <a href="#ngAfterViewInit">ngAfterViewInit</a>
+                            </li>
+                            <li>
                                  <a href="#ngOnInit">ngOnInit</a>
                             </li>
                             <li>
@@ -1007,7 +1011,7 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <code>constructor(routerExt: <a href="../injectables/RouterExtensions.html">RouterExtensions</a>)</code>
+                            <code>constructor(_appService: <a href="../injectables/AppService.html">AppService</a>, routerExt: <a href="../injectables/RouterExtensions.html">RouterExtensions</a>)</code>
                         </td>
                     </tr>
                             <tr>
@@ -1045,7 +1049,39 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/client/app/components/home/home.component.ts:40</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/client/app/components/home/home.component.ts:42</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="ngAfterViewInit"></a>
+                            <b> ngAfterViewInit</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>ngAfterViewInit()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/client/app/components/home/home.component.ts:29</a></div>
                                 </td>
                             </tr>
     
@@ -1077,7 +1113,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/client/app/components/home/home.component.ts:21</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/client/app/components/home/home.component.ts:22</a></div>
                                 </td>
                             </tr>
     
@@ -1109,7 +1145,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/client/app/components/home/home.component.ts:31</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/client/app/components/home/home.component.ts:33</a></div>
                                 </td>
                             </tr>
     
@@ -1216,7 +1252,7 @@
                         </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/client/app/components/home/home.component.ts:18</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/client/app/components/home/home.component.ts:19</a></div>
                                 </td>
                             </tr>
     
@@ -1257,10 +1293,10 @@
 
 
     <div class="tab-pane fade tab-source-code" id="source">
-        <pre class="line-numbers"><code class="language-typescript">import {Component, ElementRef, ViewChild, OnInit} from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers"><code class="language-typescript">import {Component, ElementRef, ViewChild, OnInit, AfterViewInit} from &#x27;@angular/core&#x27;;
 
 
-import {RouterExtensions} from &#x27;../../modules/core/services/index&#x27;;
+import {AppService, RouterExtensions} from &#x27;../../modules/core/services/index&#x27;;
 
 @Component({
   moduleId: module.id,
@@ -1268,23 +1304,25 @@ import {RouterExtensions} from &#x27;../../modules/core/services/index&#x27;;
   templateUrl: &#x27;home.component.html&#x27;,
   styleUrls: [&#x27;home.component.css&#x27;]
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit {
 
   @ViewChild(&#x27;el&#x27;) el: ElementRef;
   height: number;
   timeOut: any;
 
-  constructor(public routerExt: RouterExtensions) {
+  constructor(private _appService: AppService,
+              public routerExt: RouterExtensions) {
   }
 
   ngOnInit() {
-
     if (typeof document &#x3D;&#x3D;&#x3D; &#x27;object&#x27; &amp;&amp; document.title) {
       document.title &#x3D; &#x27;home&#x27;;
       this._calcHeight();
     }
+  }
 
-
+  ngAfterViewInit(): void {
+    this._appService.isPreloader &#x3D; false;
   }
 
   onWindowResize(event: any) {

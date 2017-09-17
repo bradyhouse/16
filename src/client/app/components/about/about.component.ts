@@ -1,4 +1,5 @@
-import {Injector, Component, OnInit, ElementRef, ViewChild} from '@angular/core';
+import {Injector, Component, OnInit, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import {AppService} from '../../modules/core/services/index';
 import {Config} from '../../modules/core/index';
 
 @Component({
@@ -9,15 +10,13 @@ import {Config} from '../../modules/core/index';
     'about.component.css',
   ],
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent implements OnInit, AfterViewInit {
 
   @ViewChild('el') el: ElementRef;
   height: number;
   timeOut: any;
 
 
-  // Just one way you could handle the {N} `ui/page` Page class
-  // in a shared component...
   private _page: any;
   private get page() {
     if (Config.PageClass) {
@@ -29,11 +28,8 @@ export class AboutComponent implements OnInit {
     }
   }
 
-  constructor(private injector: Injector) {
-    // This is here as an example
-    // if (this.page) {
-    //   this.page.actionBarHidden = true;
-    // }
+  constructor(private _appService: AppService,
+    private injector: Injector) {
   }
 
   ngOnInit() {
@@ -41,6 +37,11 @@ export class AboutComponent implements OnInit {
       document.title = 'About';
       this._calcHeight();
     }
+  }
+
+
+  ngAfterViewInit(): void {
+    this._appService.isPreloader = false;
   }
 
   onWindowResize(event: any) {

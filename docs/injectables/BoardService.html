@@ -942,6 +942,9 @@
                             <td class="col-md-4">
                                 <ul class="index-list">
                                     <li>
+                                         <a href="#canShiftY">canShiftY</a>
+                                    </li>
+                                    <li>
                                          <a href="#init">init</a>
                                     </li>
                                     <li>
@@ -958,6 +961,9 @@
                                     </li>
                                     <li>
                                          <a href="#shiftX">shiftX</a>
+                                    </li>
+                                    <li>
+                                         <a href="#shiftY">shiftY</a>
                                     </li>
                                     <li>
                                          <a href="#slide">slide</a>
@@ -1002,6 +1008,38 @@
                     <h3 id="methods">
                         Methods
                     </h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="canShiftY"></a>
+                                    <b> canShiftY</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+            <code>canShiftY(up: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>, square: <a href="../classes/Square.html">Square</a>)</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="214" class="link-to-prism">src/client/app/modules/puzzle/services/board/board.service.ts:214</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+            
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+            
+                                        </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
@@ -1179,7 +1217,39 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="214" class="link-to-prism">src/client/app/modules/puzzle/services/board/board.service.ts:214</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="222" class="link-to-prism">src/client/app/modules/puzzle/services/board/board.service.ts:222</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+            
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+            
+                                        </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="shiftY"></a>
+                                    <b> shiftY</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+            <code>shiftY(up: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>, square: <a href="../classes/Square.html">Square</a>)</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="263" class="link-to-prism">src/client/app/modules/puzzle/services/board/board.service.ts:263</a></div>
                                         </td>
                                     </tr>
             
@@ -1750,6 +1820,14 @@ export class BoardService {
     }
   }
 
+  canShiftY(up: boolean, square: Square) {
+    if (up) {
+      return square.col &#x3D;&#x3D;&#x3D; this.emptySquare.col &amp;&amp; square.row &gt; this.emptySquare.row ? true : false;
+    } else {
+      return square.col &#x3D;&#x3D;&#x3D; this.emptySquare.col &amp;&amp; square.row &lt; this.emptySquare.row ? true : false;
+    }
+  }
+
   shiftX(left: boolean &#x3D; false, square: Square): void {
     let squareIndices: number[] &#x3D; [],
         emptySquareIndices: number[] &#x3D; [];
@@ -1790,6 +1868,48 @@ export class BoardService {
       }
     }
   }
+
+  shiftY(up: boolean &#x3D; false, square: Square): void {
+    let squareIndices: number[] &#x3D; [],
+      emptySquareIndices: number[] &#x3D; [];
+
+    if (this.board &amp;&amp; this.board.squares &amp;&amp; this.board.squares.length) {
+      this.board.squares.forEach((s: Square, index: number) &#x3D;&gt; {
+        if (s.col &#x3D;&#x3D;&#x3D; this.emptySquare.col) {
+          squareIndices.push(index);
+        }
+      });
+      if (squareIndices.length &#x3D;&#x3D;&#x3D; 8) {
+        if (up) {
+          Utils.swap(this.board.squares[squareIndices[0]], this.board.squares[squareIndices[1]]);
+          Utils.swap(this.board.squares[squareIndices[1]], this.board.squares[squareIndices[2]]);
+          Utils.swap(this.board.squares[squareIndices[2]], this.board.squares[squareIndices[3]]);
+          Utils.swap(this.board.squares[squareIndices[3]], this.board.squares[squareIndices[4]]);
+          Utils.swap(this.board.squares[squareIndices[4]], this.board.squares[squareIndices[5]]);
+          Utils.swap(this.board.squares[squareIndices[5]], this.board.squares[squareIndices[6]]);
+          Utils.swap(this.board.squares[squareIndices[6]], this.board.squares[squareIndices[7]]);
+        } else {
+          Utils.swap(this.board.squares[squareIndices[7]], this.board.squares[squareIndices[6]]);
+          Utils.swap(this.board.squares[squareIndices[6]], this.board.squares[squareIndices[5]]);
+          Utils.swap(this.board.squares[squareIndices[5]], this.board.squares[squareIndices[4]]);
+          Utils.swap(this.board.squares[squareIndices[4]], this.board.squares[squareIndices[3]]);
+          Utils.swap(this.board.squares[squareIndices[3]], this.board.squares[squareIndices[2]]);
+          Utils.swap(this.board.squares[squareIndices[2]], this.board.squares[squareIndices[1]]);
+          Utils.swap(this.board.squares[squareIndices[1]], this.board.squares[squareIndices[0]]);
+        }
+
+        emptySquareIndices &#x3D; squareIndices.filter((indice: number) &#x3D;&gt; {
+          return this.board.squares[indice].isEmpty;
+        });
+
+        if (emptySquareIndices.length) {
+          this.emptySquare &#x3D; this.board.squares[emptySquareIndices[0]];
+        }
+        this.persist();
+      }
+    }
+  }
+
 }
 </code></pre>
     </div>
