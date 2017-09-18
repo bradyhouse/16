@@ -23,14 +23,13 @@ export class ProjectConfig extends SixteenConfig {
       ...this.NPM_DEPENDENCIES,
       { src: 'jquery/dist/jquery.min.js', inject: 'libs' },
       { src: 'jquery-ui-dist/jquery-ui.min.js', inject: 'libs' },
-      { src: 'bootstrap/dist/css/bootstrap.min.css', inject: true, vendor: true }
+      { src: 'bootstrap/dist/css/bootstrap.min.css', inject: true, vendor: true },
+      { src: 'mdi/css/materialdesignicons.min.css', inject: true }
 
     ];
 
-    // Add `local` third-party libraries to be injected/bundled.
     this.APP_ASSETS = [
-      // {src: `${this.APP_SRC}/your-path-to-lib/libs/jquery-ui.js`, inject: true, vendor: false}
-      // {src: `${this.CSS_SRC}/path-to-lib/test-lib.css`, inject: true, vendor: false},
+      { src: `${this.CSS_SRC}/styles.css`, inject: true, vendor: false }
     ];
 
     this.ROLLUP_INCLUDE_DIR = [

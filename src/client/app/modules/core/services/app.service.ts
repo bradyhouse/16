@@ -10,6 +10,7 @@ export class AppService {
 
   isPreloaderChange$: Observable<boolean>;
   isReadyChange$: Observable<boolean>;
+  langChange$: Observable<string>;
 
 
   private _isReady: boolean;
@@ -17,6 +18,8 @@ export class AppService {
   private _isPreloader: boolean;
   private _isPreloaderObserver: Observer<boolean>;
 
+  private _language: string;
+  private _langChangeObserver: Observer<string>;
 
   get isReady(): boolean {
     return this._isReady;
@@ -40,6 +43,18 @@ export class AppService {
     return this._isPreloader;
   }
 
+
+  get language(): string {
+    return this._language;
+  }
+
+  set language(value: string) {
+    this._language = value;
+    if (this._langChangeObserver) {
+      this._langChangeObserver.next(value);
+    }
+  }
+
   constructor(public analytics: AnalyticsService, public log: LogService) {
     this.log.debug(`AppService -> Config env: ${Config.ENVIRONMENT().ENV}`);
 
@@ -51,6 +66,10 @@ export class AppService {
     ).share();
 
     this.isPreloaderChange$ = new Observable<boolean>(
+      (observer: any) => this._isPreloaderObserver = observer
+    ).share();
+
+    this.langChange$ = new Observable<string>(
       (observer: any) => this._isPreloaderObserver = observer
     ).share();
 

@@ -1,5 +1,6 @@
 import {Component, OnDestroy, Injector, OnInit, AfterViewInit} from '@angular/core';
 import {ISubscription} from 'rxjs/Subscription';
+import {IEvent, EventType} from '../../modules/core/interfaces/index';
 import {AppService} from '../../modules/core/services/index';
 import {
   ToolbarOptionsInterface,
@@ -68,9 +69,18 @@ export class PuzzleComponent implements OnInit, OnDestroy, AfterViewInit {
     this.clearSubscriptions();
   }
 
-
   ngAfterViewInit(): void {
     this._appService.isPreloader = false;
+  }
+
+  onEvent(event: IEvent) {
+    switch (event.type) {
+      case EventType.SHAKE:
+        this._gameStateService.zero();
+        this.board.squares = [];
+        this._boardService.init(this._gameStateService, new Board(8, 8));
+        break;
+    }
   }
 
   onSquareClick($event: any): void {
@@ -103,7 +113,7 @@ export class PuzzleComponent implements OnInit, OnDestroy, AfterViewInit {
         return this.onHorizontalDragEnd($event, square);
       }
       if (this.startDragSquare.col === this.dragOverSquare.col) {
-       return this.onVerticalDragEnd($event, square);
+        return this.onVerticalDragEnd($event, square);
       }
     }
     this.startDragSquare = null;

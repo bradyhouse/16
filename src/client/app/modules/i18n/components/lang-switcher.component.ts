@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, Input, Output } from '@angular/core';
 import { Store } from '@ngrx/store';
 
 
@@ -16,8 +16,21 @@ import { MultilingualService, Languages, LanguageViewHelper } from '../services/
 })
 export class LangSwitcherComponent {
 
-  public lang: string;
   public supportedLanguages: Array<ILang>;
+
+  private _lang: string;
+
+
+
+  @Input()
+  set lang(value: string) {
+    if (value !== this._lang) {
+      this._lang = value;
+      this.changeLang({
+        target: { value: value}
+      });
+    }
+  }
 
   constructor(
     private store: Store<IAppState>,
@@ -26,12 +39,10 @@ export class LangSwitcherComponent {
     @Inject(LanguageViewHelper) private viewHelper
   ) {
     store.take(1).subscribe((s: any) => {
-      // s && s.18n - ensures testing works in all cases (since some tests dont use i18n state)
       this.lang = s && s.i18n ? s.i18n.lang : '';
     });
 
     if (Config.IS_DESKTOP()) {
-      // allow electron menu to talk to component
       ElectronEventService.on('changeLang').subscribe((e: any) => {
         this.changeLang({ target: { value: e.detail.value } });
       });
@@ -39,7 +50,7 @@ export class LangSwitcherComponent {
   }
 
   changeLang(e: any) {
-    let lang = this.supportedLanguages[0].code; // fallback to default 'en'
+    let lang = this.supportedLanguages[0].code;
 
     if (Config.IS_MOBILE_NATIVE()) {
       if (e) {
@@ -55,8 +66,6 @@ export class LangSwitcherComponent {
   ngOnInit() {
     this.supportedLanguages = this.languages;
     if (Config.IS_MOBILE_NATIVE() && this.viewHelper) {
-      // {N} 3.0 requires SegmentedBarItem class for items
-      // when binding to SegmentedBar
       this.supportedLanguages = this.viewHelper;
     }
   }

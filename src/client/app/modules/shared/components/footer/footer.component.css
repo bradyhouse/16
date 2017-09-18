@@ -1,0 +1,17 @@
+.navbar-fixed-bottom {
+    background-color: black;
+}
+
+.shake {
+    background: url("./assets/svg/flash.svg");
+    top: 12px;
+    right: 10px;
+    margin-right: 40px;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    margin-top: 15px;
+    opacity: 0.7; }
+
+.shake:hover {
+    opacity: 1; }

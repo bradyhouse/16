@@ -10,4 +10,7 @@ export class PuzzleStateService extends StateService {
   constructor(databaseService: LocalStorageService) {
     super(databaseService);
   }
+  zero() {
+    this.databaseService.zero();
+  }
 }

@@ -23,7 +23,7 @@ h1 {
   right: 52px; }
 
 .more {
-  background: url("./assets/svg/more.svg");
+  background: url("./assets/svg/flash.svg");
   top: 12px;
   right: 10px;
   height: 24px;
@@ -34,4 +34,3 @@ h1 {
 .more:hover {
   opacity: 1; }
 
-/*# sourceMappingURL=/app/modules/shared/components/toolbar/toolbar.component.css.map */
