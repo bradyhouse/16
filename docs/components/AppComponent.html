@@ -112,6 +112,9 @@
                                     <a href="../components/AppComponent.html"  data-type="entity-link" class="active" >AppComponent</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/FooterComponent.html" >FooterComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/HomeComponent.html" >HomeComponent</a>
                                 </li>
                                 <li class="link">
@@ -351,6 +354,9 @@
                                     <a href="../interfaces/ICoreModuleOptions.html" >ICoreModuleOptions</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../interfaces/IEvent.html" >IEvent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../interfaces/ILang.html" >ILang</a>
                                 </li>
                                 <li class="link">
@@ -534,6 +540,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/AppComponent.html"  data-type="entity-link" class="active" >AppComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/FooterComponent.html" >FooterComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/HomeComponent.html" >HomeComponent</a>
@@ -773,6 +782,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../interfaces/ICoreModuleOptions.html" >ICoreModuleOptions</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/IEvent.html" >IEvent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../interfaces/ILang.html" >ILang</a>
@@ -1032,7 +1044,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/client/app/components/app.component.ts:38</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/client/app/components/app.component.ts:37</a></div>
                                 </td>
                             </tr>
     
@@ -1169,7 +1181,6 @@ export class AppComponent extends BaseComponent {
     private _appService: AppService
   ) {
     super();
-
     log.debug(&#x60;Config env: ${Config.ENVIRONMENT().ENV}&#x60;);
 
     this.subscriptions.push(_appService.isPreloaderChange$
@@ -1230,7 +1241,7 @@ export class AppComponent extends BaseComponent {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div platform>  <sd-toolbar></sd-toolbar>  <sd-navbar></sd-navbar>  <router-outlet></router-outlet></div></div>'
-    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'sd-about'},{'name': 'AppComponent', 'selector': 'sd-app'},{'name': 'HomeComponent', 'selector': 'sd-home'},{'name': 'LangSwitcherComponent', 'selector': 'lang-switcher'},{'name': 'NavbarComponent', 'selector': 'sd-navbar'},{'name': 'PuzzleComponent', 'selector': 'sd-puzzle'},{'name': 'ToolbarComponent', 'selector': 'pz-toolbar'},{'name': 'ToolbarComponent', 'selector': 'sd-toolbar'}];
+    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'sd-about'},{'name': 'AppComponent', 'selector': 'sd-app'},{'name': 'FooterComponent', 'selector': 'sd-footer'},{'name': 'HomeComponent', 'selector': 'sd-home'},{'name': 'LangSwitcherComponent', 'selector': 'lang-switcher'},{'name': 'NavbarComponent', 'selector': 'sd-navbar'},{'name': 'PuzzleComponent', 'selector': 'sd-puzzle'},{'name': 'ToolbarComponent', 'selector': 'pz-toolbar'},{'name': 'ToolbarComponent', 'selector': 'sd-toolbar'}];
     var DIRECTIVES = [{'name': 'PlatformDirective', 'selector': '[platform]'}];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};
 </script>

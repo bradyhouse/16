@@ -112,6 +112,9 @@
                                     <a href="../components/AppComponent.html" >AppComponent</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/FooterComponent.html" >FooterComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/HomeComponent.html" >HomeComponent</a>
                                 </li>
                                 <li class="link">
@@ -351,6 +354,9 @@
                                     <a href="../interfaces/ICoreModuleOptions.html" >ICoreModuleOptions</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../interfaces/IEvent.html" >IEvent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../interfaces/ILang.html" >ILang</a>
                                 </li>
                                 <li class="link">
@@ -534,6 +540,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/AppComponent.html" >AppComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/FooterComponent.html" >FooterComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/HomeComponent.html" >HomeComponent</a>
@@ -775,6 +784,9 @@
                                            <a href="../interfaces/ICoreModuleOptions.html" >ICoreModuleOptions</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../interfaces/IEvent.html" >IEvent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../interfaces/ILang.html" >ILang</a>
                                        </li>
                                        <li class="link">
@@ -957,7 +969,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <span class="modifier">Public</span> <a href="#lang">lang</a>
+                                 <a href="#lang">lang</a>
                             </li>
                             <li>
                                 <span class="modifier">Public</span> <a href="#supportedLanguages">supportedLanguages</a>
@@ -992,12 +1004,12 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <code>constructor(store: <a href="../interfaces/IAppState.html">Store<IAppState></a>, log: <a href="../injectables/LogService.html">LogService</a>, languages: , viewHelper: )</code>
+                            <code>constructor(store: <a href="../interfaces/IAppState.html">Store<IAppState></a>, log: <a href="../injectables/LogService.html">LogService</a>, storageService: <a href="../injectables/StorageService.html">StorageService</a>, languages: , viewHelper: )</code>
                         </td>
                     </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/client/app/modules/i18n/components/lang-switcher.component.ts:20</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/client/app/modules/i18n/components/lang-switcher.component.ts:21</a></div>
                                 </td>
                             </tr>
     
@@ -1029,7 +1041,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/client/app/modules/i18n/components/lang-switcher.component.ts:41</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/client/app/modules/i18n/components/lang-switcher.component.ts:46</a></div>
                                 </td>
                             </tr>
     
@@ -1061,7 +1073,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/client/app/modules/i18n/components/lang-switcher.component.ts:55</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/client/app/modules/i18n/components/lang-switcher.component.ts:61</a></div>
                                 </td>
                             </tr>
     
@@ -1088,12 +1100,12 @@
                     <tr>
                         <td class="col-md-4">
                             <a name="lang"></a>
-                            <b><span class="modifier">Public</span> lang</b>
+                            <b> lang</b>
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <span class="modifier-icon fa fa-"></span><code>lang:     <code><a href="../TestApis/t.html" target="_self" >string</a></code>
+                            <code>lang:     <code><a href="../TestApis/t.html" target="_self" >string</a></code>
     </code>
                         </td>
                     </tr>
@@ -1105,7 +1117,7 @@
                         </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/client/app/modules/i18n/components/lang-switcher.component.ts:19</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/client/app/modules/i18n/components/lang-switcher.component.ts:21</a></div>
                                 </td>
                             </tr>
     
@@ -1134,7 +1146,7 @@
                         </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/client/app/modules/i18n/components/lang-switcher.component.ts:20</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/client/app/modules/i18n/components/lang-switcher.component.ts:19</a></div>
                                 </td>
                             </tr>
     
@@ -1146,11 +1158,11 @@
 
 
     <div class="tab-pane fade tab-source-code" id="source">
-        <pre class="line-numbers"><code class="language-typescript">import { Component, Inject } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers"><code class="language-typescript">import { Component, Inject, Input, Output } from &#x27;@angular/core&#x27;;
 import { Store } from &#x27;@ngrx/store&#x27;;
 
 
-import { Config, ILang, LogService } from &#x27;../../core/index&#x27;;
+import { Config, ILang, LogService, StorageService, StorageKey } from &#x27;../../core/index&#x27;;
 import { IAppState } from &#x27;../../ngrx/index&#x27;;
 import { ElectronEventService } from &#x27;../../electron/index&#x27;;
 import * as multilingual from &#x27;../actions/index&#x27;;
@@ -1164,22 +1176,27 @@ import { MultilingualService, Languages, LanguageViewHelper } from &#x27;../serv
 })
 export class LangSwitcherComponent {
 
-  public lang: string;
   public supportedLanguages: Array&lt;ILang&gt;;
+
+  lang: string;
+
 
   constructor(
     private store: Store&lt;IAppState&gt;,
     private log: LogService,
+    private storageService: StorageService,
     @Inject(Languages) private languages,
     @Inject(LanguageViewHelper) private viewHelper
   ) {
-    store.take(1).subscribe((s: any) &#x3D;&gt; {
-      // s &amp;&amp; s.18n - ensures testing works in all cases (since some tests dont use i18n state)
-      this.lang &#x3D; s &amp;&amp; s.i18n ? s.i18n.lang : &#x27;&#x27;;
-    });
 
+    if (this.storageService.getItem(StorageKey.LANGUAGE)) {
+      this.lang &#x3D; this.storageService.getItem(StorageKey.LANGUAGE);
+    } else {
+      store.take(1).subscribe((s: any) &#x3D;&gt; {
+        this.lang &#x3D; s &amp;&amp; s.i18n ? s.i18n.lang : &#x27;&#x27;;
+      });
+    }
     if (Config.IS_DESKTOP()) {
-      // allow electron menu to talk to component
       ElectronEventService.on(&#x27;changeLang&#x27;).subscribe((e: any) &#x3D;&gt; {
         this.changeLang({ target: { value: e.detail.value } });
       });
@@ -1187,13 +1204,14 @@ export class LangSwitcherComponent {
   }
 
   changeLang(e: any) {
-    let lang &#x3D; this.supportedLanguages[0].code; // fallback to default &#x27;en&#x27;
+    let lang &#x3D; this.supportedLanguages[0].code;
 
     if (Config.IS_MOBILE_NATIVE()) {
       if (e) {
         lang &#x3D; this.supportedLanguages[e.newIndex].code;
       }
     } else if (e &amp;&amp; e.target) {
+      this.storageService.setItem(StorageKey.LANGUAGE, e.target.value);
       lang &#x3D; e.target.value;
     }
     this.log.debug(&#x60;Language change: ${lang}&#x60;);
@@ -1203,10 +1221,15 @@ export class LangSwitcherComponent {
   ngOnInit() {
     this.supportedLanguages &#x3D; this.languages;
     if (Config.IS_MOBILE_NATIVE() &amp;&amp; this.viewHelper) {
-      // {N} 3.0 requires SegmentedBarItem class for items
-      // when binding to SegmentedBar
       this.supportedLanguages &#x3D; this.viewHelper;
     }
+
+    window.setTimeout(() &#x3D;&gt; {
+      if (this.storageService.getItem(StorageKey.LANGUAGE)) {
+        this.changeLang({ target: { value: this.storageService.getItem(StorageKey.LANGUAGE) } });
+      }
+    }, 64);
+
   }
 }
 </code></pre>
@@ -1251,7 +1274,7 @@ export class LangSwitcherComponent {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><form class="form-horizontal">    <fieldset>        <div class="form-group">            <div class="pull-right">                <select [(ngModel)]="lang" id="selectLanguage" class="form-control" (change)="changeLang($event)" name="lang">                    <option *ngFor="let l of supportedLanguages" [value]="l.code">{{l.title | translate}}</option>                </select>            </div>        </div>    </fieldset></form></div>'
-    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'sd-about'},{'name': 'AppComponent', 'selector': 'sd-app'},{'name': 'HomeComponent', 'selector': 'sd-home'},{'name': 'LangSwitcherComponent', 'selector': 'lang-switcher'},{'name': 'NavbarComponent', 'selector': 'sd-navbar'},{'name': 'PuzzleComponent', 'selector': 'sd-puzzle'},{'name': 'ToolbarComponent', 'selector': 'pz-toolbar'},{'name': 'ToolbarComponent', 'selector': 'sd-toolbar'}];
+    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'sd-about'},{'name': 'AppComponent', 'selector': 'sd-app'},{'name': 'FooterComponent', 'selector': 'sd-footer'},{'name': 'HomeComponent', 'selector': 'sd-home'},{'name': 'LangSwitcherComponent', 'selector': 'lang-switcher'},{'name': 'NavbarComponent', 'selector': 'sd-navbar'},{'name': 'PuzzleComponent', 'selector': 'sd-puzzle'},{'name': 'ToolbarComponent', 'selector': 'pz-toolbar'},{'name': 'ToolbarComponent', 'selector': 'sd-toolbar'}];
     var DIRECTIVES = [{'name': 'PlatformDirective', 'selector': '[platform]'}];
     var ACTUAL_COMPONENT = {'name': 'LangSwitcherComponent'};
 </script>

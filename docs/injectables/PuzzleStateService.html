@@ -112,6 +112,9 @@
                                     <a href="../components/AppComponent.html" >AppComponent</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/FooterComponent.html" >FooterComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/HomeComponent.html" >HomeComponent</a>
                                 </li>
                                 <li class="link">
@@ -351,6 +354,9 @@
                                     <a href="../interfaces/ICoreModuleOptions.html" >ICoreModuleOptions</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../interfaces/IEvent.html" >IEvent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../interfaces/ILang.html" >ILang</a>
                                 </li>
                                 <li class="link">
@@ -534,6 +540,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/AppComponent.html" >AppComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/FooterComponent.html" >FooterComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/HomeComponent.html" >HomeComponent</a>
@@ -775,6 +784,9 @@
                                            <a href="../interfaces/ICoreModuleOptions.html" >ICoreModuleOptions</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../interfaces/IEvent.html" >IEvent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../interfaces/ILang.html" >ILang</a>
                                        </li>
                                        <li class="link">
@@ -897,6 +909,27 @@
 
 
 
+            <section>
+                <h3 id="index">Index</h3>
+                <table class="table table-sm table-bordered index-table">
+                    <tbody>
+                        <tr>
+                            <td class="col-md-4">
+                                <h6><b>Methods</b></h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <ul class="index-list">
+                                    <li>
+                                         <a href="#zero">zero</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
             <section>
                 <h3 id="constructor">Constructor</h3>
@@ -917,6 +950,44 @@
                     </table>
             </section>
 
+            <section>
+                
+                    <h3 id="methods">
+                        Methods
+                    </h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="zero"></a>
+                                    <b> zero</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+            <code>zero()</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/client/app/components/puzzle/puzzle-state.service.ts:13</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+            
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+            
+                                        </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </section>
 
     </div>
 
@@ -933,6 +1004,9 @@ import {
 export class PuzzleStateService extends StateService {
   constructor(databaseService: LocalStorageService) {
     super(databaseService);
+  }
+  zero() {
+    this.databaseService.zero();
   }
 }
 </code></pre>
