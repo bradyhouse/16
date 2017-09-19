@@ -1,28 +1,27 @@
+import {TestBed} from '@angular/core/testing';
+import {Component} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {Route} from '@angular/router';
+import {RouterTestingModule} from '@angular/router/testing';
 
-import { TestBed } from '@angular/core/testing';
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { Route } from '@angular/router';
-import { RouterTestingModule } from '@angular/router/testing';
-
-import { StoreModule } from '@ngrx/store';
-import { Angulartics2Module, Angulartics2Segment } from 'angulartics2';
-
-
-import { t } from '../modules/test/index';
-import { Config } from '../modules/core/index';
-import { TEST_CORE_PROVIDERS, TEST_HTTP_PROVIDERS } from '../modules/core/testing/index';
-import { NameListService } from '../modules/sample/index';
-import { SharedModule } from '../modules/shared/index';
-import { MultilingualModule } from '../modules/i18n/multilingual.module';
-import { reducer, LanguageProviders } from '../modules/i18n/index';
+import {StoreModule} from '@ngrx/store';
+import {Angulartics2Module, Angulartics2Segment} from 'angulartics2';
 
 
-import { APP_COMPONENTS } from './index';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
+import {t} from '../modules/test/index';
+import {Config} from '../modules/core/index';
+import {TEST_CORE_PROVIDERS, TEST_HTTP_PROVIDERS} from '../modules/core/testing/index';
+import {NameListService} from '../modules/sample/index';
+import {SharedModule} from '../modules/shared/index';
+import {MultilingualModule} from '../modules/i18n/multilingual.module';
+import {reducer, LanguageProviders} from '../modules/i18n/index';
 
-const config:Route[] = [
+
+import {APP_COMPONENTS} from './index';
+import {HomeComponent} from './home/home.component';
+import {AboutComponent} from './about/about.component';
+
+const config: Route[] = [
   {path: '', component: HomeComponent},
   {path: 'about', component: AboutComponent}
 ];
@@ -36,7 +35,7 @@ const testModuleConfig = () => {
         Angulartics2Segment
       ]),
       MultilingualModule,
-      StoreModule.provideStore({ }),
+      StoreModule.provideStore({}),
       RouterTestingModule.withRoutes(config)
     ],
     declarations: [
@@ -73,4 +72,5 @@ export function main() {
   selector: 'test-cmp',
   template: '<sd-app></sd-app>'
 })
-class TestComponent {}
+class TestComponent {
+}

@@ -14,6 +14,7 @@ import { EffectsModule } from '@ngrx/effects';
 
 import { t } from '../../modules/test/index';
 import { NameListService, SampleEffects, reducer } from '../../modules/sample/index';
+import {TEST_CORE_PROVIDERS, TEST_HTTP_PROVIDERS} from '../../modules/core/testing/index';
 import { CoreModule } from '../../modules/core/core.module';
 import { AnalyticsModule } from '../../modules/analytics/analytics.module';
 import { MultilingualModule } from '../../modules/i18n/multilingual.module';
@@ -35,6 +36,8 @@ const testModuleConfig = () => {
     ],
     declarations: [HomeComponent, TestComponent],
     providers: [
+      TEST_CORE_PROVIDERS(),
+      TEST_HTTP_PROVIDERS(),
       LanguageProviders,
       NameListService,
       BaseRequestOptions,

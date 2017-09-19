@@ -2,7 +2,7 @@ import { Component, Inject, Input, Output } from '@angular/core';
 import { Store } from '@ngrx/store';
 
 
-import { Config, ILang, LogService } from '../../core/index';
+import { Config, ILang, LogService, StorageService, StorageKey } from '../../core/index';
 import { IAppState } from '../../ngrx/index';
 import { ElectronEventService } from '../../electron/index';
 import * as multilingual from '../actions/index';
@@ -18,30 +18,24 @@ export class LangSwitcherComponent {
 
   public supportedLanguages: Array<ILang>;
 
-  private _lang: string;
+  lang: string;
 
-
-
-  @Input()
-  set lang(value: string) {
-    if (value !== this._lang) {
-      this._lang = value;
-      this.changeLang({
-        target: { value: value}
-      });
-    }
-  }
 
   constructor(
     private store: Store<IAppState>,
     private log: LogService,
+    private storageService: StorageService,
     @Inject(Languages) private languages,
     @Inject(LanguageViewHelper) private viewHelper
   ) {
-    store.take(1).subscribe((s: any) => {
-      this.lang = s && s.i18n ? s.i18n.lang : '';
-    });
 
+    if (this.storageService.getItem(StorageKey.LANGUAGE)) {
+      this.lang = this.storageService.getItem(StorageKey.LANGUAGE);
+    } else {
+      store.take(1).subscribe((s: any) => {
+        this.lang = s && s.i18n ? s.i18n.lang : '';
+      });
+    }
     if (Config.IS_DESKTOP()) {
       ElectronEventService.on('changeLang').subscribe((e: any) => {
         this.changeLang({ target: { value: e.detail.value } });
@@ -57,6 +51,7 @@ export class LangSwitcherComponent {
         lang = this.supportedLanguages[e.newIndex].code;
       }
     } else if (e && e.target) {
+      this.storageService.setItem(StorageKey.LANGUAGE, e.target.value);
       lang = e.target.value;
     }
     this.log.debug(`Language change: ${lang}`);
@@ -68,5 +63,12 @@ export class LangSwitcherComponent {
     if (Config.IS_MOBILE_NATIVE() && this.viewHelper) {
       this.supportedLanguages = this.viewHelper;
     }
+
+    window.setTimeout(() => {
+      if (this.storageService.getItem(StorageKey.LANGUAGE)) {
+        this.changeLang({ target: { value: this.storageService.getItem(StorageKey.LANGUAGE) } });
+      }
+    }, 64);
+
   }
 }

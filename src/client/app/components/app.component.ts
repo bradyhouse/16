@@ -21,7 +21,6 @@ export class AppComponent extends BaseComponent {
     private _appService: AppService
   ) {
     super();
-
     log.debug(`Config env: ${Config.ENVIRONMENT().ENV}`);
 
     this.subscriptions.push(_appService.isPreloaderChange$

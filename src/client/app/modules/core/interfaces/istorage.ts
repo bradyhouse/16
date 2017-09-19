@@ -7,5 +7,6 @@ export interface IStorage {
 
 // to limit interaction with localStorage to a certain whitelist, you can list those keys here
 export enum StorageKey {
-  USERNAME
+  USERNAME,
+  LANGUAGE
 }
