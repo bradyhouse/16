@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     if (typeof document === 'object' && document.title) {
-      document.title = 'home';
+      document.title = 'Home';
       this._calcHeight();
     }
   }
