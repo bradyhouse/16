@@ -1,3 +1,2 @@
-import system =  require('systemjs');
 
-system.config(JSON.parse('<%= SYSTEM_CONFIG_DEV %>'));
+System.config(JSON.parse('<%= SYSTEM_CONFIG_DEV %>'));
