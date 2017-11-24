@@ -3,11 +3,10 @@
 [![dependencies Status](https://david-dm.org/bradyhouse/16/status.svg)](https://david-dm.org/bradyhouse/16)
 [![devDependencies Status](https://david-dm.org/bradyhouse/16/dev-status.svg)](https://david-dm.org/bradyhouse/16?type=dev)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+[![Greenkeeper badge](https://badges.greenkeeper.io/bradyhouse/16.svg)](https://greenkeeper.io/)
 
 Puzzle 16
 ======
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/bradyhouse/16.svg)](https://greenkeeper.io/)
 
 ![Icon](http://i.imgur.com/s0CIHaV.png)
 
