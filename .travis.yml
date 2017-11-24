@@ -34,5 +34,8 @@ notifications:
     on_failure: always  # options: [always|never|change] default: always
     on_start: never     # options: [always|never|change] default: always
 
+cache:
+  directories: node_modules
+
 script:
   - npm run test

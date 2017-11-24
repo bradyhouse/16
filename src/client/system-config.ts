@@ -1,3 +1,3 @@
-declare var System: SystemJSLoader.System;
+import system =  require('systemjs');
 
-System.config(JSON.parse('<%= SYSTEM_CONFIG_DEV %>'));
+system.config(JSON.parse('<%= SYSTEM_CONFIG_DEV %>'));

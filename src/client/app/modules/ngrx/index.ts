@@ -1,17 +1,9 @@
 import { Observable } from 'rxjs/Observable';
 // import { combineLatest } from 'rxjs/observable/combineLatest';
 import { ActionReducer } from '@ngrx/store';
-import '@ngrx/core/add/operator/select';
 
-/**
- * The compose function is one of our most handy tools. In basic terms, you give
- * it any number of functions and it returns a function. This new function
- * takes a value and chains it through every composed function, returning
- * the output.
- *
- * More: https://drboolean.gitbooks.io/mostly-adequate-guide/content/ch5.html
- */
-import { compose } from '@ngrx/core/compose';
+declare let compose:any;
+
 
 /**
  * storeFreeze prevents state from being mutated. When mutation occurs, an
@@ -62,9 +54,9 @@ const reducers = {
 
 // ensure state is frozen as extra level of security when developing
 // helps maintain immutability
-const developmentReducer: ActionReducer<IAppState> = compose(storeFreeze, combineReducers)(reducers);
+const developmentReducer: ActionReducer<any> = compose(storeFreeze, combineReducers)(reducers);
 // for production, dev has already been cleared so no need
-const productionReducer: ActionReducer<IAppState> = combineReducers(reducers);
+const productionReducer: ActionReducer<IAppState> = combineReducers(reducers);  
 
 export function AppReducer(state: any, action: any) {
   if (String('<%= BUILD_TYPE %>') === 'dev') {
@@ -74,10 +66,10 @@ export function AppReducer(state: any, action: any) {
   }
 }
 
-export function getMultilingualState(state$: Observable<IAppState>): Observable<fromMultilingual.IMultilingualState> {
+export function getMultilingualState(state$: any): any {
   return state$.select(s => s.i18n);
 }
-export function getNameListState(state$: Observable<IAppState>): Observable<fromSample.ISampleState> {
+export function getNameListState(state$: any): any {
   return state$.select(s => s.sample);
 }
 

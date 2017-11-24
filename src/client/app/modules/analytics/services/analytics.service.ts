@@ -2,7 +2,9 @@
 import { Injectable, Inject } from '@angular/core';
 
 import * as _ from 'lodash';
-import { Angulartics2, Angulartics2Segment } from 'angulartics2';
+import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
+
+import { Angulartics2 } from 'angulartics2';
 
 export interface IAnalyticsProperties {
   category?: string;
@@ -20,7 +22,7 @@ export interface IAnalytics {
 @Injectable()
 export class AnalyticsService implements IAnalytics {
 
-  constructor(private angulartics2: Angulartics2, private segment: Angulartics2Segment) {
+  constructor(private angulartics2: Angulartics2, private segment: Angulartics2GoogleAnalytics) {
     // options
     // https://github.com/angulartics/angulartics2/blob/master/src/core/angulartics2.ts#L90-L104
     /*tics2.virtualPageviews(value: boolean);
@@ -44,9 +46,9 @@ export class AnalyticsService implements IAnalytics {
    * Called automatically by default with Angular 2 Routing
    * However, that can be turned off and this could be used manually
    **/
-  public pageTrack(path: string, location: any) {
+  public pageTrack(path: string) {
     if (!this.devMode()) {
-      this.segment.pageTrack(path, location);
+      this.segment.pageTrack(path);
     }
   }
 
