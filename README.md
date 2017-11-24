@@ -7,6 +7,8 @@
 Puzzle 16
 ======
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/bradyhouse/16.svg)](https://greenkeeper.io/)
+
 ![Icon](http://i.imgur.com/s0CIHaV.png)
 
 Puzzle 16 is a game inspired by [Eni Puzzle](http://www.enipuzzles.com/). The web-based version is currently published
