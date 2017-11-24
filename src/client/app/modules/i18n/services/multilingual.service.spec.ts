@@ -4,7 +4,8 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { Store, StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
-import { Angulartics2Module, Angulartics2Segment } from 'angulartics2';
+import { Angulartics2Module} from 'angulartics2';
+import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
 
 
 import { t } from '../../test/index';
@@ -31,10 +32,10 @@ const testModuleConfig = (options?: any) => {
         { provide: ConsoleService, useValue: console }
       ]),
       Angulartics2Module.forRoot([
-        Angulartics2Segment
+        Angulartics2GoogleAnalytics
       ]),
-      StoreModule.provideStore({ i18n: reducer }),
-      EffectsModule.run(MultilingualEffects),
+      StoreModule['provideStore']({ i18n: reducer }),
+      EffectsModule['run'](MultilingualEffects),
       RouterTestingModule
     ],
     providers: [

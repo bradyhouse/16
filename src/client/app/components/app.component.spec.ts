@@ -5,7 +5,8 @@ import {Route} from '@angular/router';
 import {RouterTestingModule} from '@angular/router/testing';
 
 import {StoreModule} from '@ngrx/store';
-import {Angulartics2Module, Angulartics2Segment} from 'angulartics2';
+import { Angulartics2Module} from 'angulartics2';
+import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
 
 
 import {t} from '../modules/test/index';
@@ -31,11 +32,9 @@ const testModuleConfig = () => {
   TestBed.configureTestingModule({
     imports: [
       SharedModule,
-      Angulartics2Module.forRoot([
-        Angulartics2Segment
-      ]),
+      Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
       MultilingualModule,
-      StoreModule.provideStore({}),
+      StoreModule['provideStore']({}),
       RouterTestingModule.withRoutes(config)
     ],
     declarations: [

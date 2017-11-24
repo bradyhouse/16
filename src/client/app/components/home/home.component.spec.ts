@@ -31,8 +31,8 @@ const testModuleConfig = () => {
       RouterTestingModule,
       AnalyticsModule,
       MultilingualModule,
-      StoreModule.provideStore({ sample: reducer }),
-      EffectsModule.run(SampleEffects)
+      StoreModule['provideStore']({ sample: reducer }),
+      EffectsModule['run'](SampleEffects)
     ],
     declarations: [HomeComponent, TestComponent],
     providers: [
