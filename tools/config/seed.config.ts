@@ -99,9 +99,9 @@ export class SeedConfig {
   COVERAGE_PORT = argv['coverage-port'] || 4004;
 
   /**
-  * The path to the coverage output
-  * NB: this must match what is configured in ./karma.conf.js
-  */
+   * The path to the coverage output
+   * NB: this must match what is configured in ./karma.conf.js
+   */
   COVERAGE_DIR = 'coverage_js';
   COVERAGE_TS_DIR = 'coverage';
 
@@ -111,7 +111,7 @@ export class SeedConfig {
    * which can be overriden by the `--base` flag when running `npm start`.
    * @type {string}
    */
-  APP_BASE = argv['base'] || '';
+  APP_BASE = argv['base'] || '/';
 
   /**
    * The base path of node modules.
@@ -293,13 +293,13 @@ export class SeedConfig {
    * The folder for the built CSS files.
    * @type {strings}
    */
-  CSS_DEST = `./${this.APP_DEST}/css`;
+  CSS_DEST = `${this.APP_DEST}/css`;
 
   /**
    * The folder for the built JavaScript files.
    * @type {string}
    */
-  JS_DEST = `./${this.APP_DEST}/js`;
+  JS_DEST = `${this.APP_DEST}/js`;
 
   /**
    * The version of the application as defined in the `package.json`.
@@ -403,11 +403,11 @@ export class SeedConfig {
    */
   ROLLUP_INCLUDE_DIR: string[] = ['node_modules/**'];
 
- /**
-  * List of named export Object key value pairs
-  * key: dependencie file
-  * value: exported Objects
-  */
+  /**
+   * List of named export Object key value pairs
+   * key: dependencie file
+   * value: exported Objects
+   */
   ROLLUP_NAMED_EXPORTS: any[] = [];
 
   /**
@@ -416,7 +416,7 @@ export class SeedConfig {
    */
   get DEPENDENCIES(): InjectableDependency[] {
     return normalizeDependencies(this.NPM_DEPENDENCIES.filter(filterDependency.bind(null, this.BUILD_TYPE)))
-      .concat(this._APP_ASSETS.filter(filterDependency.bind(null, this.BUILD_TYPE)));
+        .concat(this._APP_ASSETS.filter(filterDependency.bind(null, this.BUILD_TYPE)));
   }
 
   /**
@@ -438,15 +438,17 @@ export class SeedConfig {
       '@angular/platform-browser-dynamic': 'node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
       '@angular/router': 'node_modules/@angular/router/bundles/router.umd.js',
       '@angular/animations/browser': 'node_modules/@angular/animations/bundles/animations-browser.umd.js',
+
       '@angular/common/testing': 'node_modules/@angular/common/bundles/common-testing.umd.js',
       '@angular/compiler/testing': 'node_modules/@angular/compiler/bundles/compiler-testing.umd.js',
       '@angular/core/testing': 'node_modules/@angular/core/bundles/core-testing.umd.js',
       '@angular/http/testing': 'node_modules/@angular/http/bundles/http-testing.umd.js',
       '@angular/platform-browser/testing':
-      'node_modules/@angular/platform-browser/bundles/platform-browser-testing.umd.js',
+          'node_modules/@angular/platform-browser/bundles/platform-browser-testing.umd.js',
       '@angular/platform-browser-dynamic/testing':
-      'node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic-testing.umd.js',
+          'node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic-testing.umd.js',
       '@angular/router/testing': 'node_modules/@angular/router/bundles/router-testing.umd.js',
+
       'app/*': '/app/*',
       // For test config
       'dist/dev/*': '/base/dist/dev/*',
@@ -565,9 +567,9 @@ export class SeedConfig {
   ];
 
   /**
-  * Browser-sync middleware configurations array.
-  * @type {Array}
-  */
+   * Browser-sync middleware configurations array.
+   * @type {Array}
+   */
   PROXY_MIDDLEWARE: any[] = [];
 
   /**
@@ -725,9 +727,9 @@ export class SeedConfig {
 
   }
 
-/**
- * Convert named rollup array to object
- */
+  /**
+   * Convert named rollup array to object
+   */
   getRollupNamedExports() {
     let namedExports = {};
     this.ROLLUP_NAMED_EXPORTS.map(namedExport => {
@@ -743,8 +745,8 @@ export class SeedConfig {
  */
 export function normalizeDependencies(deps: InjectableDependency[]) {
   deps
-    .filter((d: InjectableDependency) => !/\*/.test(d.src)) // Skip globs
-    .forEach((d: InjectableDependency) => d.src = require.resolve(d.src));
+      .filter((d: InjectableDependency) => !/\*/.test(d.src)) // Skip globs
+      .forEach((d: InjectableDependency) => d.src = require.resolve(d.src));
   return deps;
 }
 

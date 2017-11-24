@@ -122,13 +122,17 @@ export class SixteenConfig extends SeedConfig {
       {
         name: 'angulartics2',
         packageMeta: {
-          main: 'dist/core.umd.js',
+          main: 'bundles/core.umd.js',
           defaultExtension: 'js'
         }
       },
       {
+        name: 'angulartics2/ga',
+        path:'node_modules/angulartics2/bundles/ga.umd.js'
+      },
+      {
         name: 'ngrx-store-freeze',
-        path: 'node_modules/ngrx-store-freeze/dist/index.js'
+        path: 'node_modules/ngrx-store-freeze/bundles/ngrx-store-freeze.umd.js'
       },
       {
         name: 'deep-freeze-strict',
