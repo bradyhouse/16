@@ -1,15 +1,15 @@
+Puzzle 16
+======
+
+![Icon](http://i.imgur.com/s0CIHaV.png)
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/bradyhouse/16.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/bradyhouse/16.svg?branch=master)](https://travis-ci.org/bradyhouse/16) 
 [![Stories in Progress](https://badge.waffle.io/bradyhouse/16.svg?label=in%20progress&title=Stories%20In%20Progress)](http://waffle.io/bradyhouse/16)
 [![dependencies Status](https://david-dm.org/bradyhouse/16/status.svg)](https://david-dm.org/bradyhouse/16)
 [![devDependencies Status](https://david-dm.org/bradyhouse/16/dev-status.svg)](https://david-dm.org/bradyhouse/16?type=dev)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
-Puzzle 16
-======
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/bradyhouse/16.svg)](https://greenkeeper.io/)
-
-![Icon](http://i.imgur.com/s0CIHaV.png)
 
 Puzzle 16 is a game inspired by [Eni Puzzle](http://www.enipuzzles.com/). The web-based version is currently published
 on github => [http://bradyhouse.github.io/sixteen](http://bradyhouse.github.io/sixteen/#/). The android and iOS versions of the
