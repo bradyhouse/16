@@ -47,24 +47,19 @@ module.exports = function (config) {
       { pattern: 'node_modules/@angular/**/*.js', included: false, watched: true },
       { pattern: 'node_modules/@angular/**/*.js.map', included: false, watched: false },
 
-      // Advanced seed
-      { pattern: 'node_modules/lodash/**/*.js', included: false, watched: false },
-      { pattern: 'node_modules/@ngx-translate/**/*.js', included: false, watched: false },
-      { pattern: 'node_modules/@ngrx/**/*.js', included: false, watched: false },
-      { pattern: 'node_modules/angulartics2/**/*.js', included: false, watched: false },
-      { pattern: 'node_modules/ngrx-store-freeze/**/*.js', included: false, watched: false },
-      { pattern: 'node_modules/deep-freeze-strict/**/*.js', included: false, watched: false },
+      'test-config.js',
+      { pattern: 'dist/dev/system-config.js', watched: true, included: true },
 
       { pattern: 'dist/dev/**/*.js', included: false, watched: true },
       { pattern: 'dist/dev/**/*.html', included: false, watched: true, served: true },
       { pattern: 'dist/dev/**/*.css', included: false, watched: true, served: true },
-      { pattern: 'node_modules/systemjs/dist/system-polyfills.js', included: false, watched: false }, // PhantomJS2 (and possibly others) might require it
 
       // suppress annoying 404 warnings for resources, images, etc.
       { pattern: 'dist/dev/assets/**/*', watched: false, included: false, served: true },
 
-      'test-config.js',
-      'dist/dev/system-config.js',
+      // Test dependencies for HttpClient
+      { pattern: 'node_modules/tslib/**/*.js', included: false, watched: true },
+
       'test-main.js'
     ],
 

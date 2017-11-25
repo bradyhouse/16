@@ -53,7 +53,7 @@ let DEV_IMPORTS: any[] = [];
 if (String('<%= BUILD_TYPE %>') === 'dev') {
   DEV_IMPORTS = [
     ...DEV_IMPORTS,
-    StoreDevtoolsModule.instrumentOnlyWithExtension()
+    StoreDevtoolsModule['instrumentOnlyWithExtension']()
   ];
 }
 
@@ -75,9 +75,9 @@ if (String('<%= BUILD_TYPE %>') === 'dev') {
     }]),
     SampleModule,
     // configure app state
-    StoreModule.provideStore(AppReducer),
-    EffectsModule.run(MultilingualEffects),
-    EffectsModule.run(SampleEffects),
+    StoreModule['provideStore'](AppReducer),
+    EffectsModule['run'](MultilingualEffects),
+    EffectsModule['run'](SampleEffects),
     // dev environment only imports
     DEV_IMPORTS,
   ],

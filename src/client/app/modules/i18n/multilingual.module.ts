@@ -12,7 +12,7 @@ import { Config } from '../core/index';
 import { MULTILANG_COMPONENTS } from './components/index';
 import { MULTILANG_PROVIDERS } from './services/index';
 
-export function translateLoaderFactory(http: Http) {
+export function translateLoaderFactory(http: any) {
   return new TranslateHttpLoader(http, `${Config.IS_MOBILE_NATIVE() ? '/' : ''}assets/i18n/`, '.json');
 }
 
@@ -21,11 +21,7 @@ export function translateLoaderFactory(http: Http) {
     CommonModule,
     HttpModule,
     FormsModule,
-    TranslateModule.forRoot([{
-      provide: TranslateLoader,
-      deps: [Http],
-      useFactory: (translateLoaderFactory)
-    }]),
+    TranslateModule
   ],
   declarations: [
     ...MULTILANG_COMPONENTS
