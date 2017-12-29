@@ -121,7 +121,7 @@
     "gulp-replace": "^0.6.1",
     "gulp-sass": "^3.0.0",
     "gulp-sourcemaps": "2.6.1",
-    "gulp-template": "^4.0.0",
+    "gulp-template": "^5.0.0",
     "gulp-tslint": "^8.0.0",
     "gulp-typescript": "^3.0.2",
     "gulp-uglify": "^3.0.0",
