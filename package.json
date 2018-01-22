@@ -65,7 +65,7 @@
   "devDependencies": {
     "@angular/compiler-cli": "~5.0.3",
     "@angular/platform-server": "~5.0.3",
-    "@ngrx/store-devtools": "^4.1.1",
+    "@ngrx/store-devtools": "^5.0.0",
     "@compodoc/compodoc": "^1.0.0-beta.7",
     "@types/async": "^2.0.32",
     "@types/browser-sync": "^0.0.37",
