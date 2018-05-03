@@ -154,7 +154,7 @@
     "serve-static": "^1.11.1",
     "slash": "~1.0.0",
     "supports-color": "^5.0.0",
-    "systemjs-builder": "0.16.12",
+    "systemjs-builder": "0.16.13",
     "tildify": "^1.2.0",
     "traceur": "^0.0.111",
     "ts-node": "^3.0.4",
