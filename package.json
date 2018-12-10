@@ -102,7 +102,7 @@
     "event-stream": "^3.3.4",
     "express": "~4.16.2",
     "express-history-api-fallback": "^2.0.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-atom-electron": "^1.6.1",
     "gulp-cached": "^1.1.0",
     "gulp-concat": "^2.6.0",
