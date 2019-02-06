@@ -103,7 +103,7 @@
     "express": "~4.16.2",
     "express-history-api-fallback": "^2.0.0",
     "gulp": "^3.9.1",
-    "gulp-atom-electron": "^1.6.1",
+    "gulp-atom-electron": "^1.20.0",
     "gulp-cached": "^1.1.0",
     "gulp-concat": "^2.6.0",
     "gulp-concat-css": "^2.3.0",
