@@ -182,7 +182,7 @@
     "@ngx-translate/http-loader": "2.0.0",
     "angulartics2": "^4.0.4",
     "bootstrap": "^3.3.7",
-    "core-js": "^2.4.1",
+    "core-js": "^3.0.0",
     "es-module-loader": "^2.2.8",
     "intl": "^1.2.5",
     "jquery": "^3.2.1",
