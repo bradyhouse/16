@@ -142,7 +142,7 @@
     "mkdirp": "^0.5.1",
     "ngrx-store-freeze": "0.2.0",
     "open": "0.0.5",
-    "protractor": "^5.2.0",
+    "protractor": "^6.0.0",
     "remap-istanbul": "^0.9.5",
     "rimraf": "^2.5.4",
     "rollup": "^0.51.8",
