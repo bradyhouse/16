@@ -150,7 +150,7 @@
     "rollup-plugin-includepaths": "0.2.2",
     "rollup-plugin-node-resolve": "^3.0.0",
     "run-sequence": "^2.2.0",
-    "semver": "^5.3.0",
+    "semver": "^6.0.0",
     "serve-static": "^1.11.1",
     "slash": "~1.0.0",
     "supports-color": "^5.0.0",
