@@ -155,7 +155,7 @@
     "slash": "~1.0.0",
     "supports-color": "^5.0.0",
     "systemjs-builder": "0.16.12",
-    "tildify": "^1.2.0",
+    "tildify": "^2.0.0",
     "traceur": "^0.0.111",
     "ts-node": "^3.0.4",
     "tslint": "^5.0.0",
