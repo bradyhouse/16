@@ -85,7 +85,7 @@
     "@types/rimraf": "2.0.2",
     "@types/run-sequence": "^0.0.30",
     "@types/selenium-webdriver": "^3.0.3",
-    "@types/systemjs": "^0.20.6",
+    "@types/systemjs": "^6.1.0",
     "@types/yargs": "^8.0.2",
     "@types/zone.js": "^0.5.12",
     "async": "^2.1.1",
