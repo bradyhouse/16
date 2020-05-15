@@ -78,7 +78,7 @@
     "@types/gulp-protractor": "^1.0.29",
     "@types/gulp-rename": "0.0.33",
     "@types/gulp-sass": "^0.0.31",
-    "@types/gulp-util": "^3.0.29",
+    "@types/gulp-util": "^3.0.35",
     "@types/jasmine": "2.8.2",
     "@types/lodash": "^4.14.63",
     "@types/node": "^8.0.53",
