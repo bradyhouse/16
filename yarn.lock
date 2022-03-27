@@ -245,9 +245,10 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
-"@types/gulp-filter@^3.0.29":
-  version "3.0.29"
-  resolved "https://registry.yarnpkg.com/@types/gulp-filter/-/gulp-filter-3.0.29.tgz#b81f6b98fc8268271080ef13c9e0f51ae8dff884"
+"@types/gulp-filter@3.0.34":
+  version "3.0.34"
+  resolved "https://registry.yarnpkg.com/@types/gulp-filter/-/gulp-filter-3.0.34.tgz#80ee75a310f9307769adcd63a2bdbc1a4cbd9745"
+  integrity sha512-RgsfhEsDe68rG/6KrrBWcEDrVmK1AgScPYx3264v3P5yrg1MNKlKapI7jLhe3EnwYCSAePe7VnxyMygVPDmu0w==
   dependencies:
     "@types/minimatch" "*"
     "@types/node" "*"
