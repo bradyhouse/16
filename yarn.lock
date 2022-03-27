@@ -162,9 +162,10 @@
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/@ngx-translate/core/-/core-9.0.1.tgz#000f2d863c4c94c818e1416ef43cca2c5c0c5848"
 
-"@ngx-translate/http-loader@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@ngx-translate/http-loader/-/http-loader-2.0.0.tgz#9c16d07cd070c67ada270a2e940281eb826b3f43"
+"@ngx-translate/http-loader@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@ngx-translate/http-loader/-/http-loader-2.0.1.tgz#aa67788e64bfa8652691a77b022b3b4031209113"
+  integrity sha1-qmd4jmS/qGUmkad7Ais7QDEgkRM=
 
 "@socket.io/base64-arraybuffer@~1.0.2":
   version "1.0.2"
