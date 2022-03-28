@@ -253,9 +253,10 @@
     "@types/node" "*"
     "@types/vinyl" "*"
 
-"@types/gulp-htmlmin@^1.3.30":
-  version "1.3.30"
-  resolved "https://registry.yarnpkg.com/@types/gulp-htmlmin/-/gulp-htmlmin-1.3.30.tgz#2a0a48e0fa1711ff92aa24ae9f41fb60d6bc3456"
+"@types/gulp-htmlmin@1.3.32":
+  version "1.3.32"
+  resolved "https://registry.yarnpkg.com/@types/gulp-htmlmin/-/gulp-htmlmin-1.3.32.tgz#342baec649f285c7cbd78dfcf54dd17c388bde2b"
+  integrity sha512-G/xcBVxm0haTePU+Z8nGs+pL7tl489v2gKzm4ARrv7o9taoaXRgRbp58yDz/XkuqFUHeU5Z0/YiR9RsN+M6LSQ==
   dependencies:
     "@types/html-minifier" "*"
     "@types/node" "*"
