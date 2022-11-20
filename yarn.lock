@@ -266,9 +266,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/gulp-newer@0.0.31":
-  version "0.0.31"
-  resolved "https://registry.yarnpkg.com/@types/gulp-newer/-/gulp-newer-0.0.31.tgz#f35f23d1e4fe0d7b8ff699e49d1c21766cb9e3a7"
+"@types/gulp-newer@0.0.32":
+  version "0.0.32"
+  resolved "https://registry.yarnpkg.com/@types/gulp-newer/-/gulp-newer-0.0.32.tgz#d2128f36e3ac4842cd0df7628f1bb0b44dceed14"
+  integrity sha512-H9KRWsNr4Z/HfUU82yuDT9Vshps8BsUWjOBqUImIsk9iBU2a19d/FIl6yUqCx1juSwzmKx8jbZ45S7zP49aWQw==
   dependencies:
     "@types/node" "*"
 

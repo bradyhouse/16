@@ -74,7 +74,7 @@
     "@types/gulp-filter": "^3.0.29",
     "@types/gulp-htmlmin": "^1.3.30",
     "@types/gulp-load-plugins": "^0.0.31",
-    "@types/gulp-newer": "0.0.31",
+    "@types/gulp-newer": "0.0.32",
     "@types/gulp-protractor": "^1.0.29",
     "@types/gulp-rename": "0.0.33",
     "@types/gulp-sass": "^0.0.31",
