@@ -260,9 +260,10 @@
     "@types/html-minifier" "*"
     "@types/node" "*"
 
-"@types/gulp-load-plugins@^0.0.31":
-  version "0.0.31"
-  resolved "https://registry.yarnpkg.com/@types/gulp-load-plugins/-/gulp-load-plugins-0.0.31.tgz#e25c9d626b2c0947944cf8369b9ecdd2dbf2e57a"
+"@types/gulp-load-plugins@^0.0.37":
+  version "0.0.37"
+  resolved "https://registry.yarnpkg.com/@types/gulp-load-plugins/-/gulp-load-plugins-0.0.37.tgz#c663833a14b6b1a469a97edca3187c25e42a60a2"
+  integrity sha512-gmQpE77bVR5bbT7xUltn3eXQ+EEa0D3aplJHeZhnefOvPxm3cEjfJTa8UMnkVpAmi6b465vmmQqkIpDM/5H+HA==
   dependencies:
     "@types/node" "*"
 
