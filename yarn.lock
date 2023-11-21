@@ -324,9 +324,10 @@
     "@types/relateurl" "*"
     "@types/uglify-js" "*"
 
-"@types/jasmine@2.8.2":
-  version "2.8.2"
-  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-2.8.2.tgz#6ae4d8740c0da5d5a627df725b4eed71b8e36668"
+"@types/jasmine@2.8.23":
+  version "2.8.23"
+  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-2.8.23.tgz#fdd8b684ab2e31c5a01e1c763ea4c443afe23df9"
+  integrity sha512-x2taYv8LtplAGTEPxEnc1nWh3dqV4VhgAzXLXQkRolB/+cAOfCAqXt+8cKjX/a8v1JmNXQ9yGCJT8+8pEuU1Mg==
 
 "@types/lodash@4.14.74", "@types/lodash@^4.14.63":
   version "4.14.74"
