@@ -73,21 +73,24 @@
     magic-string "^0.19.0"
     source-map "^0.5.6"
 
-"@ngx-translate/core@^6.0.1":
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/@ngx-translate/core/-/core-6.0.1.tgz#7c7a80077feb994fc815b67a72065af04d394efe"
+"@ngx-translate/core@~7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@ngx-translate/core/-/core-7.0.0.tgz#5b6f63bd4042164d44cd85f68703af96e9392e7d"
+  integrity sha512-DFlMftPYugSlzfZRhWUwAUhgWy6Vc2mIUNCiHmLClVBmv+zb7Mb8SJ40PC5tsXKoMQXn2UzHdt3h35jws8tyhw==
 
-"@ngx-translate/http-loader@0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@ngx-translate/http-loader/-/http-loader-0.0.3.tgz#8346c8d2d6f630254601029668f17abe2afe8a9b"
+"@ngx-translate/http-loader@~0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@ngx-translate/http-loader/-/http-loader-0.1.0.tgz#6029325561d7868fe325a419de2770e98ff1502e"
+  integrity sha512-YarxppsMRcH7oB7rHKcOndMQxvL798wUO9GooRuchGhmqJmC0trtpW6rCY7J8ju/2dour3rr5yDvXM1HXYohlg==
 
 "@types/jasmine@2.5.41":
   version "2.5.41"
   resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-2.5.41.tgz#d5e86161a0af80d52062b310a33ed65b051a0713"
 
-"@types/lodash@4.14.63":
-  version "4.14.63"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.63.tgz#5ac475f55bfdc62bc88c4239dbc482f2f3bead93"
+"@types/lodash@4.17.12":
+  version "4.17.12"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.17.12.tgz#25d71312bf66512105d71e55d42e22c36bcfc689"
+  integrity sha512-sviUmCE8AYdaF/KIHLDJBQgeYzPBI0vf/17NaYehBJfYD1j6/L95Slh07NlyK2iNyBNaEkb3En2jRt+a8y3xZQ==
 
 abbrev@1:
   version "1.0.9"
@@ -150,9 +153,10 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
-angulartics2@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/angulartics2/-/angulartics2-2.2.1.tgz#07877930d4c57b73bfcbf8557a05133ebe995b30"
+angulartics2@^2.2.2:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/angulartics2/-/angulartics2-2.5.0.tgz#e5c5002119a068a6759438d59c6c692d48f168f6"
+  integrity sha512-tBOgwrG6Ia8+OYfMVcWhxym9C+ikoA7c99297t8oedpfliGp2mWXiTXXi+CNAjlQg5n+tD+wyDsNKYz+4HtA3Q==
 
 ansi-regex@^2.0.0:
   version "2.0.0"
@@ -1910,9 +1914,10 @@ nan@^2.3.0, nan@^2.3.2:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.4.0.tgz#fb3c59d45fe4effe215f0b890f8adf6eb32d2232"
 
-nativescript-angular@~3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/nativescript-angular/-/nativescript-angular-3.0.0.tgz#401c5eae895c22a44010c16f443910d2aa5af6ee"
+nativescript-angular@~3.1.1:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/nativescript-angular/-/nativescript-angular-3.1.3.tgz#b7cc81df93c51e9178420c7c5d0cacd18eaddae7"
+  integrity sha512-34Fp+u8rEsUMNPmOjJGhOhU5Z1fmJC+v9hgvWW+081giyI3fj4HfZrPxeR5ZMk7GM3PD8TOBHGtllc0uYzzKQQ==
   dependencies:
     nativescript-intl "^3.0.0"
     reflect-metadata "^0.1.8"
@@ -3129,15 +3134,17 @@ timers-browserify@^2.0.2:
   dependencies:
     setimmediate "^1.0.4"
 
-tns-core-modules-widgets@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/tns-core-modules-widgets/-/tns-core-modules-widgets-3.0.0.tgz#503c762819c936ce51e0b6025c776ae42a4500fb"
+tns-core-modules-widgets@3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/tns-core-modules-widgets/-/tns-core-modules-widgets-3.1.1.tgz#336ebdd67955e889b918db2ecf2472feb57087e0"
+  integrity sha512-ov3TG6hsiuqMeGiFgnvFpK37AbYTnQ4SsTRRx2bduHkEoTyzEAjasYpbREIM3zRZEfroq012jkorjsYq4viJ4Q==
 
-tns-core-modules@~3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/tns-core-modules/-/tns-core-modules-3.0.0.tgz#be0a538d3924a48320e9a875a1d351c664a3c9ab"
+tns-core-modules@~3.1.0:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/tns-core-modules/-/tns-core-modules-3.1.1.tgz#7b389c42dd6c10db2d1adfbc6c91031703e50dd5"
+  integrity sha512-xWCIQdXuW5DOnNULJX0G8OMITuUZdZ8S6Y/g4wnNLK+hzqfdvw23yI6XuREcipgaaRdq5l9m+JfY72Yv0uyerA==
   dependencies:
-    tns-core-modules-widgets "3.0.0"
+    tns-core-modules-widgets "3.1.1"
 
 tns-platform-declarations@^3.0.1:
   version "3.0.1"
